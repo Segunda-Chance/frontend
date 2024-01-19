@@ -14,7 +14,7 @@ function Footer() {
           <a href='https://www.linkedin.com/in/mlls/' target="_blank" rel="noopener noreferrer">
             <LinkedinLogo size={48} weight='bold' className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-600' />
           </a>
-          <a href='https://github.com/Marilyn-FullStack' target="_blank" rel="noopener noreferrer">
+          <a href='https://github.com/Segunda-Chance' target="_blank" rel="noopener noreferrer">
             <GithubLogo size={48} weight='bold' className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-600' />
           </a>
           <a href='https://wa.me/message/M26HMQRIVWBBP1' target="_blank" rel="noopener noreferrer">

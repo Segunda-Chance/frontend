@@ -13,6 +13,7 @@
     "@phosphor-icons/react": "^2.0.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
     "yarn": "^1.22.21"
   },
   "devDependencies": {
