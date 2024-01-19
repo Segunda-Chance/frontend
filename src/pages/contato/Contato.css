@@ -2,15 +2,21 @@
     padding: 0;
     margin: 0;
 }
+.container-contato{
+    width: 100%;
+}
 
-.container{
+
+.container-contato{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 .sub-container{
-    width: 70%;
+    max-width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
