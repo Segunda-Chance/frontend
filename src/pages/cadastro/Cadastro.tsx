@@ -15,11 +15,11 @@ function Cadastro() {
 
   const [usuario, setUsuario] = useState<Usuario>({
     id: 0,
-    nome: '',
+    nomeUsuario: '',
     usuario: '',
     senha: '',
-    foto: ''
-  })
+    foto:''  
+    })
   
   useEffect(() => {
     if (usuario.id !== 0){
@@ -36,9 +36,11 @@ function Cadastro() {
       ...usuario,
       [e.target.name]: e.target.value
     })
-    console.log(usuario)
+    
   }
 
+  console.log(usuario)
+  
   function handleConfirmarSenha(e: ChangeEvent<HTMLInputElement>){
     setConfirmaSenha(e.target.value)
     console.log(confirmaSenha)
@@ -78,11 +80,11 @@ function Cadastro() {
             <label htmlFor="nome">Nome</label>
             <input
               type="text"
-              id="nome"
-              name="nome"
+              id="nomeUsuario"
+              name="nomeUsuario"
               placeholder="Nome"
               className="border-2 border-slate-700 rounded p-2"
-             value = {usuario.nome}
+             value = {usuario.nomeUsuario}
              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>

@@ -1,8 +1,10 @@
+import Produto from "./Produto";
 
 export default interface Usuario {
     id: number;
-    nome: string;
+    nomeUsuario: string;
     usuario: string;
     senha: string;
     foto: string
+    produtos?: Produto | null;
 }
