@@ -15,7 +15,7 @@ function Navbar() {
                         <Link to='/home' className='text-2xl font-bold uppercase'>Segunda Chance</Link>
                     </div>
                     <div className='flex gap-4'>
-                        <Link to='/' className='hover:underline'>Login</Link>
+                        <Link to='/login' className='hover:underline'>Login</Link>
                         <Link to='/home' className='hover:underline'>Home</Link>
                         <Link to='/contato' className='hover:underline'>Contato</Link>
                         <Link to='/sobre' className='hover:underline'>Sobre</Link>
