@@ -1,10 +1,9 @@
 import { GithubLogo, LinkedinLogo, WhatsappLogo } from '@phosphor-icons/react';
 
 function Footer() {
-
   return (
     <div className="flex justify-center bg-gradient-to-r from-violet-950 via-purple-400 to-blue-950 text-white">
-      <div className="container flex flex-col items-center py-4">
+      <div className="container flex flex-col items-center py-5">
         <p className='text-xl font-bold'>
           Ong Segunda Chance | ©
         </p>

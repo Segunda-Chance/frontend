@@ -9,6 +9,9 @@ function Navbar() {
 
                 <div className=" container-nav flex text-lg flex-col justify-center text-center">
                     <div>
+                        
+                    </div>
+                    <div>
                         <Link to='/home' className='text-2xl font-bold uppercase'>Segunda Chance</Link>
                     </div>
                     <div className='flex gap-4'>
