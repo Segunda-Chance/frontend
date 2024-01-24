@@ -4,7 +4,7 @@ function Sobre() {
     return (
         <div className="container-sobre">
         <div className = "container mx-auto p-4 text-center" >
-            <h1 className="text-3xl font-bold mb-4">Projeto Segunda Chance</h1>
+            <h1 className="text-3xl font-bold mb-4">Projeto Segunda Chance</h1>yarn run tailwindcss init -p
             <img
                 className="mx-auto mb-4 rounded-full"
                 src="https://ik.imagekit.io/id3pm8vmy/mendi.jpg?updatedAt=1705676331820"

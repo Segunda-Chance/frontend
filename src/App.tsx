@@ -5,11 +5,15 @@ import Contato from './pages/contato/Contato'
 import Home from './pages/home/Home'
 import Footer from './components/footer/Footer'
 import Sobre from './pages/sobre/Sobre'
+import { AuthProvider } from './contexts/AuthContext'
+import Cadastro from './pages/cadastro/Cadastro'
+import Login from './pages/login/Login'
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
           <Navbar />
           <div className='min-h-[80vh]'>
             <Routes>
@@ -17,10 +21,13 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/contato" element={<Contato />} />
               <Route path="/sobre" element={<Sobre />} />
+              <Route path="/cadastro" element={<Cadastro />} />
+              <Route path="/login" element={<Login />} />
             </Routes>
           </div>
           <Footer />
         </BrowserRouter>
+      </AuthProvider>
     </>
   )
 }
