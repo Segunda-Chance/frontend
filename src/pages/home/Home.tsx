@@ -26,7 +26,7 @@ function Home() {
                         ">Seja Bem Vinde ao Projeto Segunda Chance!</h2>
 
                         <div className="flex justify-around gap-4">
-
+                            
                             <button className='rounded bg-white text-orange-400 py-2 px-4'>Saiba mais sobre</button>
                         </div>
                     </div>
