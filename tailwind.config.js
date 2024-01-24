@@ -4,6 +4,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
+    colors: {
+      rosa_1: '#C04140',
+      rosa_2: '#FC948F',
+      rosa_transparent_3:'#fc948fc4',
+      laranja_1: '#F27D14',
+      laranja_2: '#FEA245',
+      laranja_transparent_3:'#fea2458a',
+      neutro_1: '#A39575',
+      neutro_2: '#FAF7EC',
+    },
   },
   plugins: [],
 }

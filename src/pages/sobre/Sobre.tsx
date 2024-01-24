@@ -1,5 +1,8 @@
+import "./Sobre.css"
+
 function Sobre() {
     return (
+        <div className="container-sobre">
         <div className = "container mx-auto p-4 text-center" >
             <h1 className="text-3xl font-bold mb-4">Projeto Segunda Chance</h1>
             <img
@@ -14,6 +17,7 @@ function Sobre() {
             </p>
             <p><span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis reprehenderit amet debitis incidunt perspiciatis sit minima, modi eaque deleniti earum quos culpa error, nulla voluptatum adipisci blanditiis illo nihil totam!</span><span>Voluptatem impedit, omnis ad explicabo nemo porro sint eius dolorum architecto, quod, quaerat facilis inventore. Sunt quia quod dignissimos sapiente deleniti? Sint necessitatibus unde dolor dolores suscipit nobis neque perferendis?</span><span>Vitae, omnis? A beatae, ipsam cum incidunt accusantium repudiandae officia dolor molestias illum expedita magni neque. Voluptas deleniti, laboriosam officiis atque cumque sapiente eveniet, tempore recusandae hic similique, enim cupiditate.</span></p>
         </div >
+        </div>
     )
 }
 

@@ -3,7 +3,7 @@ import "./Contato.css"
 
 function Contato() {
     return (
-        <div className='container-contato w-full min-h-[80vh]'>
+        <div className='container-contato w-full min-h-[80vh] bg-neutro_2'>
             <h2 className="text-2xl font-bold">Time de Desenvolvimento</h2>
             <br />
             <div className='sub-container '>

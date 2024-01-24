@@ -1,8 +1,10 @@
+import "./Home.css"
+
 function Home() {
 
     return (
         <>
-            <div id="container" className="
+            <div id="container"  className="bg-neutro_2 container-home 
             bg-orange-200 
             flex 
             justify-center

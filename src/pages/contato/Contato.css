@@ -34,9 +34,10 @@
     display: flex;
     width: 400px;
     height: 230px;
-    background-color: aqua;
+    background-color: #fc948fc4;
     justify-content:space-around;
     align-items:center;
+    border-radius: 7px;
 }
 
 .card-profile img {
@@ -52,4 +53,6 @@
     margin-left: -20px;
 }
 
-
+.container-contato{
+    padding-top: 150px;
+}
