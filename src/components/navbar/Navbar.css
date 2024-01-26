@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Dreams;
+    src: url(/src/assets/font/Create\ Dream.otf);
+  }
+
 #navbarSupportedContent1 a img {
     height: 15px"
 }
@@ -13,4 +18,17 @@
 
 .container-contato{
     padding-top: 150px;
+}
+
+.temaLogo{
+    font-family: 'Creat';
+    font-family: Dreams;
+    font-size: xxx-large;
+    z-index: 2;
+}
+
+.logoImg{
+    position: relative;
+    left: 13px;
+    z-index: 1;
 }
