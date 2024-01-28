@@ -1,9 +1,10 @@
 ﻿﻿import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
 import Usuario from '../../models/Usuario'
-import './Cadastro.css'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { cadastrarUsuario } from '../../services/Service'
 import { RotatingLines } from 'react-loader-spinner'
+import  './Cadastro.css'
+
 
 function Cadastro() {
 
@@ -70,95 +71,63 @@ function Cadastro() {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen 
-            place-items-center font-bold">
-        <div className="fundoCadastro hidden lg:block"></div>
-        <form className='flex justify-center items-center flex-col w-2/3 gap-3' 
-          onSubmit={cadastrarNovoUsuario}>
-          <h2 className='text-slate-900 text-5xl'>Cadastrar</h2>
-          <div className="flex flex-col w-full">
+
+<div className="login-box">
+        <h2>Cadastrar</h2>
+        <form onSubmit={cadastrarNovoUsuario}>
+
+         {/*  Nome */}
+          <div className="user-box">
+            <input type="text" id="nomeUsuario" name="nomeUsuario" value = {usuario.nomeUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}  />
             <label htmlFor="nome">Nome</label>
-            <input
-              type="text"
-              id="nomeUsuario"
-              name="nomeUsuario"
-              placeholder="Nome"
-              className="border-2 border-slate-700 rounded p-2"
-             value = {usuario.nomeUsuario}
-             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            />
           </div>
-          <div className="flex flex-col w-full">
+
+          {/* Usuario */}
+          <div className="user-box">
+            <input type="e-mail" id="usuario" name="usuario" value = {usuario.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}/>
             <label htmlFor="usuario">Usuario</label>
-            <input
-              type="text"
-              id="usuario"
-              name="usuario"
-              placeholder="Usuario"
-              className="border-2 border-slate-700 rounded p-2"
-              value = {usuario.usuario}
-             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            />
           </div>
-          <div className="flex flex-col w-full">
+
+          {/* Foto */}
+          <div className="user-box">
+            <input type="text" id="foto" name="foto" value = {usuario.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}/>
             <label htmlFor="foto">Foto</label>
-            <input
-              type="text"
-              id="foto"
-              name="foto"
-              placeholder="Foto"
-              className="border-2 border-slate-700 rounded p-2"
-              value = {usuario.foto}
-             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            />
           </div>
-          <div className="flex flex-col w-full">
+
+          {/* Senha */}
+          <div className="user-box">
+            <input type="password" id="senha" name="senha" value = {usuario.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}/>
             <label htmlFor="senha">Senha</label>
-            <input
-              type="password"
-              id="senha"
-              name="senha"
-              placeholder="Senha"
-              className="border-2 border-slate-700 rounded p-2"
-              value = {usuario.senha}
-             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            />
           </div>
-          <div className="flex flex-col w-full">
+
+            {/* Confirmar Senha */}
+          <div className="user-box">
+            <input type="password" id="confirmarSenha" name="confirmarSenha" value={confirmaSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}/>
             <label htmlFor="confirmarSenha">Confirmar Senha</label>
-            <input
-              type="password"
-              id="confirmarSenha"
-              name="confirmarSenha"
-              placeholder="Confirmar Senha"
-              className="border-2 border-slate-700 rounded p-2"
-              value={confirmaSenha}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
-            />
           </div>
-          <div className="flex justify-around w-full gap-8">
-            <button className='rounded text-white bg-red-400 
-                  hover:bg-red-700 w-1/2 py-2' onClick={retornar}>
-              Cancelar
-            </button>
-            <button 
-                type='submit'
-                className='rounded text-white bg-indigo-400 
-                           hover:bg-indigo-900 w-1/2 py-2
-                           flex justify-center' 
-                >
+
+         {/* Retorno para o Login */}
+          <div className="cadastro">
+            <span >Ja possui uma conta?
+              <Link to="/login" className=" hover:underline pl-2 flex-end">   
+                 Login
+              </Link>
+            </span>
+          </div>
+          <div className='h-2'></div>
+           {/* Button Cadastrar */}
+          <button type='submit' className="buttonCadastrar">
                   {isLoading ? <RotatingLines
                     strokeColor="white"
                     strokeWidth="5"
                     animationDuration="0.75"
                     width="24"
-                    visible={true}
-                  /> :
-                    <span>Cadastrar</span>
+                    visible={true}/> :
+                    <span></span>
                   }
-              
-            </button>
-          </div>
+              <span></span><span></span><span></span><span></span>
+              Cadastrar
+            </button>    
         </form>
       </div>
     </>

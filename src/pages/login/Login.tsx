@@ -37,14 +37,20 @@ function Login() {
       <div className="login-box">
         <h2>Login</h2>
         <form onSubmit={login}>
+
+          {/* Usuario */}
           <div className="user-box">
             <input type="e-mail" id="usuario" name="usuario" value={usuarioLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}  />
             <label htmlFor="usuario">Usuario</label>
           </div>
+
+          {/* Senha */}
           <div className="user-box">
             <input type="password" id="senha" name="senha" value={usuarioLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
             <label htmlFor="senha" >Senha</label>
           </div>
+
+          {/* Ir para o Cadastro */}
           <div className="cadastro">
             <span >
               <Link to="/cadastro" className=" hover:underline ">   
@@ -52,7 +58,10 @@ function Login() {
               </Link>
             </span>
           </div>
-          
+
+          <div className='h-2'></div>
+
+          {/* button Entrar */}
           <button type='submit' className="buttonEntrar">
           {isLoading ? <RotatingLines
                             strokeColor="white"
@@ -65,15 +74,8 @@ function Login() {
             <span></span><span></span><span></span><span></span>
             Entrar
           </button>
-          
         </form>
       </div>
-
-
-
-      
-          
-
     </>
   );
 }
