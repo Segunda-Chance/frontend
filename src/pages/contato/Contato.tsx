@@ -1,162 +1,163 @@
-import { GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react"
+import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react"
 import "./Contato.css"
+ 
+
 
 function Contato() {
     return (
+<>
+
         <div className='container-contato w-full min-h-[80vh] bg-neutro_2'>
             <h2 className="text-2xl font-bold">Time de Desenvolvimento</h2>
-            <br />
-            <div className='sub-container '>
-                <div className="section-card">
-                    <div className="card-profile card-1">
-                        <img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Perfil%20indefinido.png?updatedAt=1705682655295" />
-                        <div className="container-redes">
-                            <h2 className="font-bold">Danielle Okuma</h2>
-                            <p>Dev FullStack</p>
-                            <a href="https://www.linkedin.com/in/danielle-okuma/" target="_blank">
-                                <span className="flex">
-                                    <LinkedinLogo size={25} weight='bold' /> Linkedin
-                                </span>
-                            </a>
-                            <span className="flex">
-                                <InstagramLogo size={25} weight='bold' />Instagram
-                            </span>
-                            <a href="https://github.com/DaniOkuma" target="_blank">
-                                <span className="flex">
-                                    <GithubLogo size={25} weight='bold' />Github
-                                </span>
-                            </a>
-                        </div>
-                    </div>
+            <br/>
 
-                    <div className="card-profile card-2">
-                        <img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Perfil%20indefinido.png?updatedAt=1705682655295" />
-                        <div className="container-redes">
-                            <h2 className="font-bold">Douglas Rosolini</h2>
-                            <p>Dev FullStack</p>
-                            <span className="flex">
-                                <LinkedinLogo size={25} weight='bold' /> Linkedin
-                            </span>
-                            <span className="flex">
-                                <InstagramLogo size={25} weight='bold' />Instagram
-                            </span>
-                            <span className="flex">
-                                <GithubLogo size={25} weight='bold' />Github
-                            </span>
+            <div className="sub-container">  
+
+                <div className="containCard">
+                    {/* Danielle */}
+                    <figure className="snip1344"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Danielle.png?updatedAt=1706472299134" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Danielle.png?updatedAt=1706472299134" alt="profile-sample1" className="profile"/>
+                    <figcaption>
+                        <h3>Danielle Okuma<span>Desenvolvedor FullStack Jr | Eng. Eletronica</span></h3>
+                        <div className="icons w-full flex gap-3 justify-center">
+                            <a href="https://www.linkedin.com/in/danielle-okuma/" className="linkedinLogo">
+                                <span className="flex">
+                                    <LinkedinLogo size={25} weight='bold' />
+                                </span>
+                            </a>
+                            <a href="https://github.com/DaniOkuma" className="githubLogo">
+                                <span className="flex">
+                                    <GithubLogo size={25} weight='bold'/>
+                                </span>
+                            </a>
                         </div>
-                    </div>
+                    </figcaption>
+                    </figure>
+
+                    {/* Douglas */}
+                    <figure className="snip1344"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Douglas.png?updatedAt=1706471202324" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Douglas.png?updatedAt=1706471202324" alt="profile-sample1" className="profile"/>
+                    <figcaption>
+                        <h3>Douglas Rosolini<span>Desenvolvedor FullStack Jr</span></h3>
+                        <div className="icons w-full flex gap-3 justify-center">
+                            <a href="https://www.linkedin.com/in/douglas-rosolini-correia-614677239/" className="linkedinLogo">
+                                <span className="flex">
+                                    <LinkedinLogo size={25} weight='bold' />
+                                </span>
+                            </a>
+                            <a href="https://github.com/douglasrc8" className="githubLogo">
+                                <span className="flex">
+                                    <GithubLogo size={25} weight='bold'/>
+                                </span>
+                            </a>
+                        </div>
+                    </figcaption>
+                    </figure>
+
+                    {/* Luiz */}
+                    <figure className="snip1344"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Luiz.png?updatedAt=1706471202569" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Luiz.png?updatedAt=1706471202569" alt="profile-sample1" className="profile"/>
+                    <figcaption>
+                        <h3>Luiz Eduardo<span>Desenvolvedor FullStack Jr</span></h3>
+                        <div className="icons w-full flex gap-3 justify-center">
+                            <a href="https://www.linkedin.com/in/luiz-eduardosc/" className="linkedinLogo">
+                                <span className="flex">
+                                    <LinkedinLogo size={25} weight='bold' />
+                                </span>
+                            </a>
+                            <a href="https://github.com/LuizEduardoSC" className="githubLogo">
+                                <span className="flex">
+                                    <GithubLogo size={25} weight='bold'/>
+                                </span>
+                            </a>
+                        </div>
+                    </figcaption>
+                    </figure>
                 </div>
-
-                <div className="section-card">
-                    <div className="card-profile card-3">
-                        <img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Perfil%20indefinido.png?updatedAt=1705682655295" />
-                        <div className="container-redes">
-                            <h2 className="font-bold">Luiz Eduardo</h2>
-                            <p>Dev FullStack</p>
-                            <a href="https://www.linkedin.com/in/luiz-eduardosc/" target="_blank">
+               
+                <div className="containCard">
+                    {/* Maria */}
+                    <figure className="snip1344"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Maria.png?updatedAt=1706474187034" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Maria.png?updatedAt=1706474187034" alt="profile-sample1" className="profile"/>
+                    <figcaption>
+                        <h3>Maria Leiliane<span>Desenvolvedor FullStack Jr</span></h3>
+                        <div className="icons w-full flex gap-3 justify-center">
+                            <a href="https://www.linkedin.com/in/luiz-eduardosc/" className="linkedinLogo">
                                 <span className="flex">
-                                    <LinkedinLogo size={25} weight='bold' /> Linkedin
+                                    <LinkedinLogo size={25} weight='bold' />
                                 </span>
                             </a>
-                            <span className="flex">
-                                <InstagramLogo size={25} weight='bold' />Instagram
-                            </span>
-                            <a href="https://github.com/LuizEduardoSC" target="_blank">
+                            <a href="https://github.com/LuizEduardoSC" className="githubLogo">
                                 <span className="flex">
-                                    <GithubLogo size={25} weight='bold' />Github
+                                    <GithubLogo size={25} weight='bold'/>
                                 </span>
                             </a>
                         </div>
-                    </div>
+                    </figcaption>
+                    </figure>
 
-                    <div className="card-profile card-4">
-                        <img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Perfil%20indefinido.png?updatedAt=1705682655295" />
-                        <div className="container-redes">
-                            <h2 className="font-bold">Maria Leilliane</h2>
-                            <p>Dev FullStack</p>
-                            <a href="https://www.linkedin.com/in/mlls/" target="_blank">
+                    {/* Natan */}
+                    <figure className="snip1344"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/NatanLopes.png?updatedAt=1706471202706" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/NatanLopes.png?updatedAt=1706471202706" alt="profile-sample1" className="profile"/>
+                    <figcaption>
+                        <h3>Natan Lopes<span>Desenvolvedor FullStack Jr</span></h3>
+                        <div className="icons w-full flex gap-3 justify-center">
+                            <a href="https://www.linkedin.com/in/nathan-lopes-da-silva-8b4962279/" className="linkedinLogo">
                                 <span className="flex">
-                                    <LinkedinLogo size={25} weight='bold' /> Linkedin
+                                    <LinkedinLogo size={25} weight='bold' />
                                 </span>
                             </a>
-                            <span className="flex">
-                                <InstagramLogo size={25} weight='bold' />Instagram
-                            </span>
-                            <a href="https://github.com/Marilyn-FullStack" target="_blank">
+                            <a href="https://github.com/NathanLPS" className="githubLogo">
                                 <span className="flex">
-                                    <GithubLogo size={25} weight='bold' />Github
+                                    <GithubLogo size={25} weight='bold'/>
                                 </span>
                             </a>
                         </div>
-                    </div>
-                </div>
-
-                <div className="section-card">
-                    <div className="card-profile card-5">
-                        <img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Perfil%20indefinido.png?updatedAt=1705682655295" />
-                        <div className="container-redes">
-                            <h2 className="font-bold">Natan Lopes</h2>
-                            <p>Dev FullStack</p>
-                            <span className="flex">
-                                <LinkedinLogo size={25} weight='bold' /> Linkedin
-                            </span>
-                            <span className="flex">
-                                <InstagramLogo size={25} weight='bold' />Instagram
-                            </span>
-                            <span className="flex">
-                                <GithubLogo size={25} weight='bold' />Github
-                            </span>
-                        </div>
-                    </div>
-
-                    <div className="card-profile card-6">
-                        <img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Perfil%20indefinido.png?updatedAt=1705682655295" />
-                        <div className="container-redes">
-                            <h2 className="font-bold">Samara Almeida</h2>
-                            <a href="https://www.linkedin.com/in/samara-almeida-als/" target="_blank">
-                                <p>Dev FullStack</p>
-                                <span className="flex">
-                                    <LinkedinLogo size={25} weight='bold' /> Linkedin
-                                </span>
-                            </a>
-                            <span className="flex">
-                                <InstagramLogo size={25} weight='bold' />Instagram
-                            </span>
-                            <a href="https://github.com/als-samara" target="_blank">
-                                <span className="flex">
-                                    <GithubLogo size={25} weight='bold' />Github
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="section-card">
-                    <div className="card-profile card-7">
-                        <img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Perfil%20indefinido.png?updatedAt=1705682655295" />
-                        <div className="container-redes">
-                            <h2 className="font-bold">Vinicius Monteiro</h2>
-                            <p>Dev FullStack</p>
-                            <a href="linkedin.com/in/viniciusmcsilva">
-                                <span className="flex">
-                                    <LinkedinLogo size={25} weight='bold' /> Linkedin
-                                </span>
-                            </a>
-                            <span className="flex">
-                                <InstagramLogo size={25} weight='bold' />Instagram
-                            </span>
-                            <a href="github.com/mcs-vinicius ">
-                                <span className="flex">
-                                    <GithubLogo size={25} weight='bold' />Github
-                                </span>
-                            </a>
-                        </div>
-                    </div>
+                    </figcaption>
+                    </figure>
                     
+                    {/* Samara */}
+                    <figure className="snip1344"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Samara.png?updatedAt=1706473024521" alt="profile-sample6" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Samara.png?updatedAt=1706473024521" alt="profile-sample6" className="profile"/>
+                        <figcaption>
+                            <h3>Samara Almeida<span>Desenvolvedor FullStack Jr</span></h3>
+                            <div className="icons w-full flex gap-3 justify-center">
+                                <a href="https://www.linkedin.com/in/samara-almeida-als/" className="linkedinLogo"> 
+                                    <span className="flex">
+                                        <LinkedinLogo size={25} weight='bold' />
+                                    </span>
+                                </a>
+                                <a href="https://github.com/als-samara" className="githubLogo">
+                                    <span className="flex">
+                                        <GithubLogo size={25} weight='bold'/>
+                                    </span>
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
                 </div>
+                
+                <div className="containCard">
+                    {/* Vinicius */}
+                    <figure className="snip1344"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Vinicius.png?updatedAt=1706471202692" alt="profile-sample6" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Vinicius.png?updatedAt=1706471202692" alt="profile-sample6" className="profile"/>
+                        <figcaption>
+                            <h3>Vinicius Monteiro<span>Desenvolvedor FullStack Jr | Analista de Sistemas</span></h3>
+                            <div className="icons w-full flex gap-3 justify-center">
+                                <a href="https://www.linkedin.com/in/viniciusmcsilva/" className="linkedinLogo"> 
+                                    <span className="flex">
+                                        <LinkedinLogo size={25} weight='bold' />
+                                    </span>
+                                </a>
+                                <a href="https://github.com/mcs-vinicius" className="githubLogo">
+                                    <span className="flex">
+                                        <GithubLogo size={25} weight='bold'/>
+                                    </span>
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                
+                
             </div>
         </div>
+        </>
     )
 }
+
 
 export default Contato
