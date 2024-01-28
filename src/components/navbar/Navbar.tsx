@@ -44,10 +44,9 @@ function Navbar() {
             <div
               className="w-10"
               data-te-dropdown-ref
-              data-te-dropdown-alignment="end"
-            >
+              data-te-dropdown-alignment="end">
               <a
-                className="hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
+                className="flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
                 href="#"
                 id="dropdownMenuButton2"
                 role="button"
@@ -62,18 +61,14 @@ function Navbar() {
                 />
               </a>
               <ul
-                className="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                className="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block bg-rosa_1 text-neutro_2"
                 aria-labelledby="dropdownMenuButton2"
                 data-te-dropdown-menu-ref
               >
-                <li>
-                  <a
-                    className="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
-                    href="#"
-                    data-te-dropdown-item-ref
-                  >
+                <li>       
+                    <Link to="/login" className="block w-full whitespace-nowrap  px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30">   
                     Login
-                  </a>
+                    </Link>
                 </li>
                 <li>
                   <a
@@ -98,6 +93,9 @@ function Navbar() {
           </div>
         </div>
 
+
+
+        {/* Menu */}
         <div className="w-full flex flex-row  bg-rosa_1 text-lg">
           <ul className="flex flex-row gap-3 w-full text-neutro_2 font-semibold justify-center">
             <li>
