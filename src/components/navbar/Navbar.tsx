@@ -35,9 +35,6 @@ function Navbar() {
               <li>Produtos</li>
               <li>Organizações</li>
               <li>
-                <Link to="/contato">Contato</Link>
-              </li>
-              <li>
                 <Link to="/sobre">Sobre</Link>
               </li>
             </ul>
