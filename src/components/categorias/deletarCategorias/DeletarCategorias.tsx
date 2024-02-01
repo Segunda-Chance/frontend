@@ -21,7 +21,7 @@ function DeletarCategorias() {
         try {
             await buscar(`/Categorias/${id}`, setCategoria, {
                 headers: {
-                    'Authorization': token
+                    Authorization: token
                 }
             })
         } catch (error: any) {
@@ -51,7 +51,7 @@ function DeletarCategorias() {
         try {
             await deletar(`/categorias/${id}`, {
                 headers: {
-                    'Authorization': token
+                    Authorization: token
                 }
             })
 
