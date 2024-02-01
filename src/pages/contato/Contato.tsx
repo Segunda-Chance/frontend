@@ -75,12 +75,12 @@ function Contato() {
                     <figcaption>
                         <h3>Maria Leiliane<span>Desenvolvedor FullStack Jr</span></h3>
                         <div className="icons w-full flex gap-3 justify-center">
-                            <a href="https://www.linkedin.com/in/luiz-eduardosc/" className="linkedinLogo">
+                            <a href="https://www.linkedin.com/in/mlls/" className="linkedinLogo">
                                 <span className="flex">
                                     <LinkedinLogo size={25} weight='bold' />
                                 </span>
                             </a>
-                            <a href="https://github.com/LuizEduardoSC" className="githubLogo">
+                            <a href="https://github.com/Marilyn-FullStack" className="githubLogo">
                                 <span className="flex">
                                     <GithubLogo size={25} weight='bold'/>
                                 </span>

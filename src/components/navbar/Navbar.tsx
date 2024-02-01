@@ -57,28 +57,37 @@ function Navbar() {
             </div>
             
 
+
+            
+
             {/*  Card Perfil */}
-            <div className=" h-auto  pr-2" data-te-dropdown-ref data-te-dropdown-alignment="end">
-              <a className=" relative transition duration-150 ease-in-out motion-reduce:transition-none" href="#"  role="button" data-te-dropdown-toggle-ref aria-expanded="false" >
-                <img width="30" height="10" src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/icone-perfil.png?updatedAt=1706670773574" alt="gender-neutral-user"/>
-              </a>
-              <ul className=" z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block bg-rosa_1 text-neutro_2" aria-labelledby="dropdownMenuButton2" ata-te-dropdown-menu-ref>
-                <li>       
-                  <Link to="/login" className="block w-full whitespace-nowrap  px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30">   
-                    Login
-                  </Link>
-                </li>
-                <li>
-                  <a className="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30" href="#" data-te-dropdown-item-ref >
-                    Perfil
-                  </a>
-                </li>
-                <li>
-                  <a className="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30" href="#" data-te-dropdown-item-ref >
-                    Sair
-                  </a>
-                </li>
-              </ul>
+            <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
+            <span className="sr-only">Open user menu</span>
+            <img className="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="user photo"/>
+            </button>
+
+            {/* Dropdown menu */}
+            <div id="dropdownAvatar" className="z-1000 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                  <div>Bonnie Green</div>
+                  <div className="font-medium truncate">name@flowbite.com</div>
+                </div>
+                <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
+                  <li>
+                    <Link to="/login" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">   
+                      Login
+                    </Link>
+                  </li>
+                  <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                  </li>
+                  <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                  </li>
+                </ul>
+                <div className="py-2">
+                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                </div>
             </div>
           </div>   
         </div>  
