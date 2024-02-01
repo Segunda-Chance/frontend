@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import Categoria from "../../../models/Categoria"
 import { AuthContext } from "../../../contexts/AuthContext"
 import { DNA } from "react-loader-spinner"
-import CardCategoria from "../carcategoria/CardCategoria"
+import CardCategoria from "../cardcategoria/CardCategoria"
 
 function ListaCategorias(){
     const navigate = useNavigate()
