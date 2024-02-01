@@ -16,9 +16,9 @@ function ListaCategorias(){
 
     async function buscarCategorias() {
         try {
-            await buscar('/categorias', setCategorias), {
+            await buscar('/categorias', setCategorias, {
                 headers: { Authorization: token }
-            }
+            })
         } catch (error: any) {
             if (error.toString().includes('403')) {
                 alert('O token expirou, favor logar novamente')

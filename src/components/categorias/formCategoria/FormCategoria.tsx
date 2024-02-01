@@ -20,16 +20,18 @@ function FormCategoria() {
 
     async function buscarPorId(id: string) {
         try {
-            await buscar(`/categorias/${id}`, setCategoria)
+            await buscar(`/categorias/${id}`, setCategoria, {
+                headers: {
+                    'Authorization': token
+                }
+            })
         } catch (error: any) {
-
             if (error.toString().includes('403')) {
                 alert('O token expirou, favor logar novamente')
                 handleLogout()
-
             }
         }
-
+    }
         useEffect(() => {
             if (id !== undefined) {
                 buscarPorId(id)
@@ -50,39 +52,39 @@ function FormCategoria() {
 
             if (id !== undefined) {
                 try {
-                    await atualizar(`/categorias`, categoria, setCategoria), {
+                    await atualizar(`/categorias`, categoria, setCategoria, {
                         headers: {
                             'Authorization': token
                         }
-                    }
+                    })
                     
-                    alert('Tema atualizado com sucesso')
+                    alert('Categoria atualizado com sucesso')
     
                 } catch (error: any) {
                     if (error.toString().includes('403')) {
                         alert('O token expirou, favor logar novamente')
                         handleLogout()
                     } else {
-                        alert('Erro ao atualizar o Tema')
+                        alert('Erro ao atualizar o Categoria')
                     }
                 }
     
             } else {
                 try {
-                    await cadastrar(`/categorias`, categoria, setCategoria), {
+                    await cadastrar(`/categorias`, categoria, setCategoria, {
                         headers: {
                             'Authorization': token
                         }
-                    }
+                    })
     
-                    alert('Tema cadastrado com sucesso')
+                    alert('Categoria cadastrado com sucesso')
     
                 } catch (error: any) {
                     if (error.toString().includes('403')) {
                         alert('O token expirou, favor logar novamente')
                         handleLogout()
                     } else {
-                        alert('Erro ao cadastrar a Postagem')
+                        alert('Erro ao cadastrar a Categoria')
                     }
                 }
             }
@@ -91,7 +93,7 @@ function FormCategoria() {
             setIsLoading(false)
             retornar()
         }
-        
+
         function retornar() {
             navigate("/categorias")
         }
@@ -148,6 +150,6 @@ function FormCategoria() {
         );
     }
 
-}
+
 
 export default FormCategoria

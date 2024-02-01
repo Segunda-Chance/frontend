@@ -19,11 +19,12 @@ function DeletarCategorias() {
 
     async function buscarPorId(id: string) {
         try {
-            await buscar(`/categorias/${id}`, setCategoria), {
+            await buscar(`/categorias/${id}`, setCategoria, {
                 headers: {
                     Authorization: token
                 }
-            }
+            })
+
         } catch (error: any) {
             if (error.toString().includes('403')) {
                 alert('O token expirou, favor logar novamente')
@@ -49,11 +50,11 @@ function DeletarCategorias() {
         setIsLoading(true)
 
         try {
-            await deletar(`/categorias/${id}`), {
+            await deletar(`/categorias/${id}`, {
                 headers: {
                     Authorization: token
                 }
-            }
+            })
 
             alert('Apagado com sucesso')
 

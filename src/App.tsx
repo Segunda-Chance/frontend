@@ -10,6 +10,7 @@ import Cadastro from './pages/cadastro/Cadastro'
 import Login from './pages/login/Login'
 import FormCategoria from './components/categorias/formCategoria/FormCategoria'
 import ListaCategorias from './components/categorias/listaCategorias/ListaCategorias'
+import DeletarCategorias from './components/categorias/deletarCategorias/DeletarCategorias'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <Route path="/cadastrarCategoria" element={<FormCategoria />} />
               <Route path="/editarCategoria/:id" element={<FormCategoria />} />
               <Route path="/categorias" element={<ListaCategorias />} />
+              <Route path="/deletarCategoria/:id" element={<DeletarCategorias />} />
             </Routes>
           </div>
           <Footer />
