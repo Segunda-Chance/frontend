@@ -1,9 +1,9 @@
-import { Link, useNavigate } from "react-router-dom";
-import "./Login.css";
-import { AuthContext } from "../../contexts/AuthContext";
 import { ChangeEvent, useContext, useEffect, useState } from "react";
-import UsuarioLogin from "../../models/UsuarioLogin";
 import { RotatingLines } from "react-loader-spinner";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
+import UsuarioLogin from "../../models/UsuarioLogin";
+import "./Login.css";
 
 function Login() {
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ function Login() {
 
           {/* Usuario */}
           <div className="user-box">
-            <input type="e-mail" id="usuario" name="usuario" value={usuarioLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}  />
+            <input type="e-mail" id="usuario" name="usuario" value={usuarioLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
             <label htmlFor="usuario">Usuario</label>
           </div>
 
@@ -53,7 +53,7 @@ function Login() {
           {/* Ir para o Cadastro */}
           <div className="cadastro">
             <span >
-              <Link to="/cadastro" className=" hover:underline ">   
+              <Link to="/cadastro" className=" hover:underline ">
                 Cadastre-se
               </Link>
             </span>
@@ -63,16 +63,19 @@ function Login() {
 
           {/* button Entrar */}
           <button type='submit' className="buttonEntrar">
-          {isLoading ? <RotatingLines
-                            strokeColor="white"
-                            strokeWidth="5"
-                            animationDuration="0.75"
-                            width="24"
-                            visible={true}/> :
-                            <span></span>
-                        } 
-            <span></span><span></span><span></span><span></span>
-            Entrar
+            {isLoading ? <RotatingLines
+              strokeColor="white"
+              strokeWidth="5"
+              animationDuration="0.75"
+              width="24"
+              text-aling='center'
+              visible={true} /> :
+              <p>Entrar</p>
+            }
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </form>
       </div>
