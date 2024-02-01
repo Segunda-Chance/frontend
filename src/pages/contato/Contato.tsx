@@ -50,7 +50,7 @@ function Contato() {
                     </figure>
 
                     {/* Luiz */}
-                    <figure className="snip1344"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Luiz.png?updatedAt=1706471202569" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Luiz.png?updatedAt=1706471202569" alt="profile-sample1" className="profile"/>
+                    <figure className="snip1344  bg-rosa_2 object-cover"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Luiz.png?updatedAt=1706471202569" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Luiz.png?updatedAt=1706471202569" alt="profile-sample1" className="profile"/>
                     <figcaption>
                         <h3>Luiz Eduardo<span>Desenvolvedor FullStack Jr</span></h3>
                         <div className="icons w-full flex gap-3 justify-center">
@@ -71,7 +71,7 @@ function Contato() {
                
                 <div className="containCard">
                     {/* Maria */}
-                    <figure className="snip1344"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Maria.png?updatedAt=1706474187034" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Maria.png?updatedAt=1706474187034" alt="profile-sample1" className="profile"/>
+                    <figure className="snip1344  bg-rosa_2 object-cover"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Maria.png?updatedAt=1706474187034" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Maria.png?updatedAt=1706474187034" alt="profile-sample1" className="profile"/>
                     <figcaption>
                         <h3>Maria Leiliane<span>Desenvolvedor FullStack Jr</span></h3>
                         <div className="icons w-full flex gap-3 justify-center">
@@ -90,7 +90,7 @@ function Contato() {
                     </figure>
 
                     {/* Natan */}
-                    <figure className="snip1344"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/NatanLopes.png?updatedAt=1706471202706" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/NatanLopes.png?updatedAt=1706471202706" alt="profile-sample1" className="profile"/>
+                    <figure className="snip1344  bg-rosa_2 object-cover"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/NatanLopes.png?updatedAt=1706471202706" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/NatanLopes.png?updatedAt=1706471202706" alt="profile-sample1" className="profile"/>
                     <figcaption>
                         <h3>Natan Lopes<span>Desenvolvedor FullStack Jr</span></h3>
                         <div className="icons w-full flex gap-3 justify-center">
@@ -109,7 +109,7 @@ function Contato() {
                     </figure>
                     
                     {/* Samara */}
-                    <figure className="snip1344"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Samara.png?updatedAt=1706473024521" alt="profile-sample6" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Samara.png?updatedAt=1706473024521" alt="profile-sample6" className="profile"/>
+                    <figure className="snip1344  bg-rosa_2 object-cover"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Samara.png?updatedAt=1706473024521" alt="profile-sample6" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Samara.png?updatedAt=1706473024521" alt="profile-sample6" className="profile"/>
                         <figcaption>
                             <h3>Samara Almeida<span>Desenvolvedor FullStack Jr</span></h3>
                             <div className="icons w-full flex gap-3 justify-center">
@@ -130,7 +130,7 @@ function Contato() {
                 
                 <div className="containCard">
                     {/* Vinicius */}
-                    <figure className="snip1344"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Vinicius.png?updatedAt=1706471202692" alt="profile-sample6" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Vinicius.png?updatedAt=1706471202692" alt="profile-sample6" className="profile"/>
+                    <figure className="snip1344  bg-rosa_2 object-cover"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Vinicius.png?updatedAt=1706471202692" alt="profile-sample6" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Vinicius.png?updatedAt=1706471202692" alt="profile-sample6" className="profile"/>
                         <figcaption>
                             <h3>Vinicius Monteiro<span>Desenvolvedor FullStack Jr | Analista de Sistemas</span></h3>
                             <div className="icons w-full flex gap-3 justify-center">
