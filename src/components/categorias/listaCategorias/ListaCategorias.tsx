@@ -1,8 +1,9 @@
-import { useContext, useEffect, useState } from "react"
+import { Dispatch, SetStateAction, useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import Categoria from "../../../models/Categoria"
 import { AuthContext } from "../../../contexts/AuthContext"
 import { DNA } from "react-loader-spinner"
+import CardCategoria from "../carcategoria/CardCategoria"
 
 function ListaCategorias(){
     const navigate = useNavigate()
@@ -68,3 +69,7 @@ function ListaCategorias(){
 }
 
 export default ListaCategorias
+
+function buscar(arg0: string, setCategorias: Dispatch<SetStateAction<Categoria[]>>, arg2: { headers: { Authorization: string } }) {
+    throw new Error("Function not implemented.")
+}
