@@ -14,12 +14,12 @@ function DeletarCategorias() {
 
     const { id } = useParams<{ id: string }>()
 
-    const { nomeUsuario, handleLogout } = useContext(AuthContext)
-    const token = nomeUsuario.token
+    const { usuario, handleLogout } = useContext(AuthContext)
+    const token = usuario.token
 
     async function buscarPorId(id: string) {
         try {
-            await buscar(`/Categorias/${id}`, setCategoria, {
+            await buscar(`/categorias/${id}`, setCategoria, {
                 headers: {
                     Authorization: token
                 }
