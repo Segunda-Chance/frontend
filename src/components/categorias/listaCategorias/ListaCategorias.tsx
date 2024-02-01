@@ -1,9 +1,10 @@
-import { Dispatch, SetStateAction, useContext, useEffect, useState } from "react"
+import {useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import Categoria from "../../../models/Categoria"
 import { AuthContext } from "../../../contexts/AuthContext"
 import { DNA } from "react-loader-spinner"
 import CardCategoria from "../cardcategoria/CardCategoria"
+import { buscar } from "../../../services/Service"
 
 function ListaCategorias(){
     const navigate = useNavigate()
@@ -13,11 +14,11 @@ function ListaCategorias(){
     const { usuario, handleLogout } = useContext(AuthContext)
     const token = usuario.token
 
-    async function buscarTemas() {
+    async function buscarCategorias() {
         try {
-            await buscar('/categorias', setCategorias, {
+            await buscar('/categorias', setCategorias), {
                 headers: { Authorization: token }
-            })
+            }
         } catch (error: any) {
             if (error.toString().includes('403')) {
                 alert('O token expirou, favor logar novamente')
@@ -34,10 +35,8 @@ function ListaCategorias(){
     }, [token])
 
     useEffect(() => {
-        buscarTemas()
+        buscarCategorias()
     }, [categorias.length])
-
-
 
     return (
         <>
@@ -70,6 +69,3 @@ function ListaCategorias(){
 
 export default ListaCategorias
 
-function buscar(arg0: string, setCategorias: Dispatch<SetStateAction<Categoria[]>>, arg2: { headers: { Authorization: string } }) {
-    throw new Error("Function not implemented.")
-}

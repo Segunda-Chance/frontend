@@ -1,29 +1,29 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom"
 import { RotatingLines } from "react-loader-spinner";
-
 import { buscar, deletar } from "../../../services/Service";
 import { AuthContext } from "../../../contexts/AuthContext";
-
 import Categoria from "../../../models/Categoria";
 
 function DeletarCategorias() {
-    const navigate = useNavigate()
-    const [isLoading, setIsLoading] = useState<boolean>(false)
-    const [categoria, setCategoria] = useState<Categoria>({} as Categoria) 
 
-    const { id } = useParams<{ id: string }>()
+    const navigate = useNavigate()
+
+    const [categoria, setCategoria] = useState<Categoria>({} as Categoria) 
+    const [isLoading, setIsLoading] = useState<boolean>(false)
+  
+    const { id } = useParams<{ id: string }>();
 
     const { usuario, handleLogout } = useContext(AuthContext)
     const token = usuario.token
 
     async function buscarPorId(id: string) {
         try {
-            await buscar(`/categorias/${id}`, setCategoria, {
+            await buscar(`/categorias/${id}`, setCategoria), {
                 headers: {
                     Authorization: token
                 }
-            })
+            }
         } catch (error: any) {
             if (error.toString().includes('403')) {
                 alert('O token expirou, favor logar novamente')
@@ -49,11 +49,11 @@ function DeletarCategorias() {
         setIsLoading(true)
 
         try {
-            await deletar(`/categorias/${id}`, {
+            await deletar(`/categorias/${id}`), {
                 headers: {
                     Authorization: token
                 }
-            })
+            }
 
             alert('Apagado com sucesso')
 

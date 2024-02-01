@@ -9,6 +9,7 @@ import { AuthProvider } from './contexts/AuthContext'
 import Cadastro from './pages/cadastro/Cadastro'
 import Login from './pages/login/Login'
 import FormCategoria from './components/categorias/formCategoria/FormCategoria'
+import ListaCategorias from './components/categorias/listaCategorias/ListaCategorias'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/cadastrarCategoria" element={<FormCategoria />} />
               <Route path="/editarCategoria/:id" element={<FormCategoria />} />
+              <Route path="/categorias" element={<ListaCategorias />} />
             </Routes>
           </div>
           <Footer />
