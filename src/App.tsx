@@ -8,6 +8,7 @@ import Sobre from './pages/sobre/Sobre'
 import { AuthProvider } from './contexts/AuthContext'
 import Cadastro from './pages/cadastro/Cadastro'
 import Login from './pages/login/Login'
+import FormCategoria from './components/categorias/formCategoria/FormCategoria'
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
               <Route path="/sobre" element={<Sobre />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/cadastrarCategoria" element={<FormCategoria />} />
+              <Route path="/editarCategoria/:id" element={<FormCategoria />} />
             </Routes>
           </div>
           <Footer />

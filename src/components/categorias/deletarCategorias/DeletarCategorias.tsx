@@ -2,10 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom"
 import { RotatingLines } from "react-loader-spinner";
 
-import { buscar, deletar } from "../../services/Service";
-import { AuthContext } from "../../contexts/AuthContext";
+import { buscar, deletar } from "../../../services/Service";
+import { AuthContext } from "../../../contexts/AuthContext";
 
-import Categoria from "../../models/Categoria";
+import Categoria from "../../../models/Categoria";
 
 function DeletarCategorias() {
     const navigate = useNavigate()
@@ -14,8 +14,8 @@ function DeletarCategorias() {
 
     const { id } = useParams<{ id: string }>()
 
-    const { usuario, handleLogout } = useContext(AuthContext)
-    const token = usuario.token
+    const { nomeUsuario, handleLogout } = useContext(AuthContext)
+    const token = nomeUsuario.token
 
     async function buscarPorId(id: string) {
         try {
@@ -45,7 +45,7 @@ function DeletarCategorias() {
         }
     }, [id])
 
-    async function deletarCategoria() { // Corrigido a assinatura da função
+    async function deletarCategoria() { 
         setIsLoading(true)
 
         try {
@@ -82,6 +82,11 @@ function DeletarCategorias() {
                     Categoria
                 </header>
                 <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.nomeCategoria}</p>
+
+                <header className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>
+                    Tipo
+                </header>
+                <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.tipo}</p>
 
                 <div className="flex">
 
