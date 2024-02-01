@@ -8,7 +8,9 @@
     margin:0;
     padding:0;
     font-family: sans-serif;
-    background: linear-gradient(#FAF7EC, #FAF7EC);
+    background: bg-neutro_2;
+    height: 100vh;
+    
   }
   
   .login-box {
@@ -18,11 +20,11 @@
     width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background: #c04040bb;
+    background: #c04040;
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
-    opacity: 0.9;
+    opacity: 0.8;
   }
   
   .login-box h2 {

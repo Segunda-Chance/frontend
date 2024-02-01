@@ -68,11 +68,14 @@ function Login() {
                             strokeWidth="5"
                             animationDuration="0.75"
                             width="24"
+                            text-aling='center'
                             visible={true}/> :
-                            <span></span>
+                            <p>Entrar</p>
                         } 
-            <span></span><span></span><span></span><span></span>
-            Entrar
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>  
           </button>
         </form>
       </div>

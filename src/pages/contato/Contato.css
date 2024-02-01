@@ -2,10 +2,6 @@
     padding: 0;
     margin: 0;
 }
-.container-contato{
-    width: 100%;
-}
-
 
 .container-contato{
     width: 100%;
@@ -13,8 +9,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    margin-top: -100px;
+    
 }
+
 .sub-container{
     display: flex;
     flex-direction: column;
@@ -26,11 +24,6 @@
 .containCard{
     display: flex;
 }
-
-
-
-
-
 
 .snip1344 {
     font-family: 'Open Sans', Arial, sans-serif;
@@ -44,6 +37,9 @@
     text-align: center;
     line-height: 1.4em;
     background-color: #141414c9;
+    box-shadow: 5px 5px 20px 5px rgba(31, 23, 21, 0.486);
+    zoom: 1;
+    border-radius: 20px;
   }
   .snip1344 * {
     -webkit-box-sizing: border-box;
@@ -54,9 +50,9 @@
   .snip1344 .background {
     width: 100%;
     vertical-align: top;
-    opacity: 0.2;
+    opacity: 1;
     -webkit-filter: grayscale(100%) blur(10px);
-    filter: grayscale(100%) blur(10px);
+    filter: grayscale(100%) blur(8px);
     -webkit-transition: all 2s ease;
     transition: all 2s ease;
   }
@@ -74,20 +70,23 @@
     left: 50%;
     max-width: 100px;
     opacity: 1;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.801);
+    border: 2px solid rgba(0, 0, 0, 0.5);
     -webkit-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
+  
   }
   .snip1344 h3 {
     margin: 0 0 5px;
-    font-weight: 400;
+    font-weight: 600;
+    text-shadow: 3px 2px 3px black;
   }
   .snip1344 h3 span {
     display: block;
-    font-size: 0.6em;
-    color: #f39c12;
+    font-size: 0.8em;
+    color: #fff;
     opacity: 0.75;
+    text-shadow: 3px 3px 3px black;
   }
   .snip1344 i {
     padding: 10px 5px;
@@ -97,6 +96,7 @@
     text-align: center;
     opacity: 0.65;
   }
+
   .snip1344 a {
     text-decoration: none;
   }

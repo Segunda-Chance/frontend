@@ -6,16 +6,13 @@ import "./Contato.css"
 function Contato() {
     return (
 <>
-
         <div className='container-contato w-full min-h-[80vh] bg-neutro_2'>
             <h2 className="text-2xl font-bold">Time de Desenvolvimento</h2>
             <br/>
-
             <div className="sub-container">  
-
                 <div className="containCard">
                     {/* Danielle */}
-                    <figure className="snip1344"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Danielle.png?updatedAt=1706472299134" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Danielle.png?updatedAt=1706472299134" alt="profile-sample1" className="profile"/>
+                    <figure className="snip1344 bg-rosa_2 object-cover" ><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/dani.png?updatedAt=1706656214214" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/dani.png?updatedAt=1706656214214" alt="profile-sample1" className="profile bg-rosa_1"/>
                     <figcaption>
                         <h3>Danielle Okuma<span>Desenvolvedor FullStack Jr | Eng. Eletronica</span></h3>
                         <div className="icons w-full flex gap-3 justify-center">
@@ -34,7 +31,7 @@ function Contato() {
                     </figure>
 
                     {/* Douglas */}
-                    <figure className="snip1344"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Douglas.png?updatedAt=1706471202324" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Douglas.png?updatedAt=1706471202324" alt="profile-sample1" className="profile"/>
+                    <figure className="snip1344 bg-rosa_2"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Douglas.png?updatedAt=1706471202324" alt="profile-sample1" className="background"/><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Douglas.png?updatedAt=1706471202324" alt="profile-sample1" className="profile  bg-rosa_1"/>
                     <figcaption>
                         <h3>Douglas Rosolini<span>Desenvolvedor FullStack Jr</span></h3>
                         <div className="icons w-full flex gap-3 justify-center">
