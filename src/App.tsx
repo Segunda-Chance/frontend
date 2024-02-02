@@ -14,6 +14,7 @@ import DeletarCategorias from './components/categorias/deletarCategorias/Deletar
 
 import FormProduto from './components/produtos/formProdutos/FormProduto'
 import ListarProdutos from './components/produtos/listarProdutos/ListarProdutos'
+import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto'
 
 
 function App() {
@@ -34,10 +35,10 @@ function App() {
               <Route path="/editarCategoria/:id" element={<FormCategoria />} />
               <Route path="/categorias" element={<ListaCategorias />} />
               <Route path="/deletarCategoria/:id" element={<DeletarCategorias />} />
-
+              <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
               <Route path="/cadastroProduto" element={<FormProduto />} />
               <Route path="/editarProduto/:id" element={<FormProduto />} />
-     <Route path="/produtos" element={<ListarProdutos />} />
+              <Route path="/produtos" element={<ListarProdutos />} />
 
             </Routes>
           </div>
