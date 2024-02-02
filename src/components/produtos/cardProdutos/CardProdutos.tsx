@@ -34,7 +34,7 @@ function CardProduto({ produto }: CardProdutoProps) {
         </Link>
       </div>
     </div>
-  )
-} 
+  ) 
+}
 
 export default CardProduto
