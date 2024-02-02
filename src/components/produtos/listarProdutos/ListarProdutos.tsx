@@ -10,9 +10,7 @@ import CardProdutos from "../cardProdutos/CardProdutos";
 function ListarProdutos() {
 
     const navigate = useNavigate();
-
     const [produtos, setProdutos] = useState<Produto[]>([]);
-
     const { usuario, handleLogout } = useContext(AuthContext);
     const token = usuario.token;
 
