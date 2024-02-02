@@ -22,12 +22,12 @@ function CardProduto({ produto }: CardProdutoProps) {
         </div>
       </div>
       <div className="flex">
-        <Link to={`/editarpostagem/${produto.id}`}
+        <Link to={`/editarproduto/${produto.id}`}
           className='w-full text-white bg-indigo-400 
                     hover:bg-indigo-800 flex items-center justify-center py-2'>
           <button>Editar</button>
         </Link>
-        <Link to={`/deletarpostagem/${produto.id}`}
+        <Link to={`/deletarproduto/${produto.id}`}
           className='text-white bg-red-400 
                     hover:bg-red-700 w-full flex items-center justify-center'>
           <button>Deletar</button>
@@ -35,6 +35,6 @@ function CardProduto({ produto }: CardProdutoProps) {
       </div>
     </div>
   )
-} 
+}
 
 export default CardProduto

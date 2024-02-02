@@ -146,10 +146,10 @@ function FormProduto() {
                     <label htmlFor="titulo">Título do Produto</label>
                     <input
                         type="text"
-                        placeholder="Descricao"
+                        placeholder="Título"
                         name="descricao"
                         className="border-2 border-slate-700 rounded p-2"
-                        value={produto.descricao}
+                        value={produto.nomeProduto}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                         required
                         minLength={5}

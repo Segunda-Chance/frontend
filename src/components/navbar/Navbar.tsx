@@ -31,14 +31,9 @@ function Navbar() {
                 <Link to="/home" className=" hover:from-neutro_1 " >Home</Link>
               </li>
               <li><Link to="/categorias" className=" hover:from-neutro_1 " >Categorias</Link></li>
-
               <li><Link to="/cadastrarCategoria" className=" hover:from-neutro_1 " >Cadastrar Categorias</Link></li>
-              <li><Link to="/cadastroProduto" className=" hover:from-neutro_1 " >Cadastrar Produtos</Link></li>
-              <li>Produtos</li>
-
-              <li><Link to="/cadastrarCategoria" className=" hover:from-neutro_1 " >Cadastrar categorias</Link></li>
               <li><Link to="/produtos" className=" hover:from-neutro_1 " >Produtos</Link></li>
-
+              <li><Link to="/cadastroProduto" className=" hover:from-neutro_1 " >Cadastrar Produtos</Link></li>
               <li>Organizações</li>
               <li>
                 <Link to="/sobre">Sobre</Link>

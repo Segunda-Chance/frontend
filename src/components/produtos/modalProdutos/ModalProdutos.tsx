@@ -1,5 +1,5 @@
 import Popup from 'reactjs-popup';
-import FormProdutos from '../formProdutos/FormProdutos';
+import FormProdutos from '../formProdutos/FormProduto';
 
 import 'reactjs-popup/dist/index.css';
 import './ModalProdutos.css';
