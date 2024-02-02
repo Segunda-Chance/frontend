@@ -16,7 +16,7 @@ function FormProduto() {
     const [categoria, setCategoria] = useState<Categoria>({
         id: 0,
         nomeCategoria: '',
-        tipo:'',
+        tipo: '',
     })
 
     const carregandoCategoria = categoria.tipo === '';
@@ -106,7 +106,7 @@ function FormProduto() {
                     alert('O token expirou, favor logar novamente')
                     handleLogout()
                 } else {
-                   alert('Erro ao atualizar o Produto')
+                    alert('Erro ao atualizar o Produto')
                 }
             }
 
@@ -118,7 +118,7 @@ function FormProduto() {
                     },
                 })
 
-               alert('Produto cadastrado com sucesso');
+                alert('Produto cadastrado com sucesso');
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
@@ -206,17 +206,21 @@ function FormProduto() {
                 </div>
                 <div className="flex flex-col gap-2">
                     <p>Categoria da Produto</p>
-                    <select name="categoria" id="categoria"
+                    <select
+                        name="categoria"
+                        id="categoria"
                         className='border p-2 border-slate-800 rounded'
                         onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}
+                        defaultValue=""  // Use defaultValue para definir a opção padrão
                     >
-                        <option value="" selected disabled>Selecione uma Categoria</option>
+                        <option value="" disabled>Selecione uma Categoria</option>
                         {categorias.map((categoria) => (
-                            <>
-                                <option value={categoria.id} >{categoria.tipo}</option>
-                            </>
+                            <option key={categoria.id} value={categoria.id}>
+                                {categoria.tipo}
+                            </option>
                         ))}
                     </select>
+
                 </div>
                 <button
                     type='submit'
