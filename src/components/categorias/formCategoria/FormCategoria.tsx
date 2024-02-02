@@ -4,6 +4,8 @@ import Categoria from "../../../models/Categoria";
 import { atualizar, buscar, cadastrar } from "../../../services/Service";
 import { RotatingLines } from "react-loader-spinner";
 import { AuthContext } from "../../../contexts/AuthContext"
+import './FormCategoria.css'
+import ListaCategorias from "../listaCategorias/ListaCategorias";
 
 function FormCategoria() {
 
@@ -43,6 +45,7 @@ function FormCategoria() {
                 ...categoria,
                 [e.target.name]: e.target.value
             })
+
         }
 
     
@@ -95,58 +98,48 @@ function FormCategoria() {
         }
 
         function retornar() {
-            navigate("/categorias")
+            navigate("/cadastrarCategoria")
         }
 
         return (
-            <div className="container flex flex-col items-center justify-center mx-auto">
-                <h1 className="text-4xl text-center my-8  font-bold">
-                    {id === undefined ? 'Cadastrar Categoria' : 'Editar Categoria'}
-                </h1>
+            <>
+                <div className=" flex flex-col items-center justify-center mx-auto">
+                    <h1 className="tituloCategoria text-4xl text-center my-8 ">
+                        {id === undefined ? 'Cadastrar Categoria' : 'Editar Categoria'}
+                    </h1>
+                    <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
+                        <input id="input-1" autoFocus type="text" name='tipo' placeholder="Calçado" required value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
+                        <label htmlFor="input-1">
+                            <span className="label-text">Tipo Categoria</span>
+                            <span className="nav-dot"></span>
+                            <div className="signup-button-trigger">Cadastrar Categoria</div>
+                        </label>
+                        <input id="input-2" type="text" name='nomeCategoria' placeholder="Tênis" required value={categoria.nomeCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
+                        <label htmlFor="input-2">
+                            <span className="label-text">Nome Categoria</span>
+                            <span className="nav-dot"></span>
+                        </label>
+                            <button id="buttonCategoria" className='w-1/2 py-2 flex justify-center' >
+                                {isLoading ? 
+                                        <RotatingLines
+                                            strokeColor="white"
+                                            strokeWidth="5"
+                                            animationDuration="0.75"
+                                            width="24"
+                                            visible={true}
+                                        /> :
+                                        <span>Concluir</span>
+                                }
+                            </button>
+                        <p className="tip">Aperte Tab</p>
+                        <div className="signup-button" >{id === undefined ? 'Cadastrar' : 'Atualizar'}</div>
+                    </form>
+                </div>
 
-                <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
-                    <div className="flex flex-col gap-2">
-                        <label htmlFor="tipo" className=" font-bold">Tipo da Categoria</label>
-                        <input
-                            type="text"
-                            placeholder="Descreva aqui sua categoria"
-                            name='tipo'
-                            className="border-2 border-slate-400 rounded p-2"
-                            value={categoria.tipo}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        <label htmlFor="tipo" className=" font-bold">Nome da Categoria</label>
-                        <input
-                            type="text"
-                            placeholder="Descreva aqui sua categoria"
-                            name='nomeCategoria'
-                            className="border-2 border-slate-400 rounded p-2"
-                            value={categoria.nomeCategoria}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        />
-                    </div>
-                    <button
-                        className="rounded font-bold bg-slate-400 hover:bg-slate-600
-                     w-1/2 py-2 mx-auto flex justify-center"
-                        type="submit">
-
-                        {isLoading ?
-                            <RotatingLines
-                                strokeColor="white"
-                                strokeWidth="5"
-                                animationDuration="0.75"
-                                width="24"
-                                visible={true}
-                            /> :
-                            <span>{id === undefined ? 'Cadastrar' : 'Atualizar'}</span>
-
-                        }
-
-                    </button>
-                </form>
-            </div>
+                <div className="mt-40 pt-5 pb-10">
+                    <ListaCategorias/>
+                </div>
+            </>
         );
     }
 

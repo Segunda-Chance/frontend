@@ -8,7 +8,7 @@ function Home() {
             bg-orange-200 
             flex 
             justify-center
-            min-h-[80vh]">
+            min-h-[85vh]">
                 <div id="subcontainer" className="
                 container 
                 grid 
