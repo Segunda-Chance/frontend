@@ -1,9 +1,9 @@
+import { useContext, useEffect, useState } from "react";
+import { DNA } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
-import { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import { buscar } from "../../../services/Service";
-import { DNA } from "react-loader-spinner";
 import CardProdutos from "../cardProdutos/CardProdutos";
 
 
@@ -18,7 +18,7 @@ function ListarProdutos() {
 
     async function buscarProdutos() {
         try {
-            await buscar('/produtos', setProdutos, {
+            await buscar('/produto', setProdutos, {
                 headers: {
                     Authorization: token,
                 },

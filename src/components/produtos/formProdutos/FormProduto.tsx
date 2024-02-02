@@ -1,10 +1,10 @@
 import { ChangeEvent, useContext, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { atualizar, buscar, cadastrar } from "../../../services/Service";
-import { AuthContext } from "../../../contexts/AuthContext";
 import { RotatingLines } from "react-loader-spinner";
-import Produto from "../../../models/Produto";
+import { useNavigate, useParams } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthContext";
 import Categoria from "../../../models/Categoria";
+import Produto from "../../../models/Produto";
+import { atualizar, buscar, cadastrar } from "../../../services/Service";
 
 function FormProduto() {
 
@@ -16,10 +16,10 @@ function FormProduto() {
     const [categoria, setCategoria] = useState<Categoria>({
         id: 0,
         nomeCategoria: '',
-        tipo:'',
-        
+        tipo: '',
     })
-    const carregandoCategoria = categoria.tipo === '';
+
+    const carregandoCategorias = categoria.tipo === '';
 
     const [produto, setProduto] = useState<Produto>({} as Produto)
 
@@ -29,7 +29,7 @@ function FormProduto() {
     const token = usuario.token
 
     async function buscarProdutoPorId(id: string) {
-        await buscar(`/produtos/${id}`, setProduto, {
+        await buscar(`/produto/${id}`, setProduto, {
             headers: {
                 Authorization: token,
             },
@@ -72,7 +72,7 @@ function FormProduto() {
             ...produto,
             categoria: categoria,
         })
-    }, [categorias])
+    }, [categoria])
 
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
         setProduto({
@@ -84,16 +84,16 @@ function FormProduto() {
     }
 
     function retornar() {
-        navigate('/produtos');
+        navigate('/produto');
     }
 
-    async function gerarNovaProduto(e: ChangeEvent<HTMLFormElement>) {
+    async function gerarNovaPostagem(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         setIsLoading(true)
 
         if (id != undefined) {
             try {
-                await atualizar(`/produtos`, produto, setProduto, {
+                await atualizar(`/produto`, produto, setProduto, {
                     headers: {
                         Authorization: token,
                     },
@@ -103,22 +103,22 @@ function FormProduto() {
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('O token expirou, favor logar novamente')
+                    alert('O token expirou, favor logar novamente',)
                     handleLogout()
                 } else {
-                   alert('Erro ao atualizar o Produto')
+                    alert('Erro ao atualizar o Produto',)
                 }
             }
 
         } else {
             try {
-                await cadastrar(`/produtos`, produto, setProduto, {
+                await cadastrar(`/produto`, produto, setProduto, {
                     headers: {
                         Authorization: token,
                     },
                 })
 
-               alert('Produto cadastrado com sucesso');
+                alert('Produto cadastrado com sucesso');
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
@@ -140,14 +140,14 @@ function FormProduto() {
                 {id !== undefined ? 'Editar Produto' : 'Cadastrar Produto'}
             </h1>
 
-            <form className="flex flex-col w-1/2 gap-4" onSubmit={gerarNovaProduto}>
+            <form className="flex flex-col w-1/2 gap-4" onSubmit={gerarNovaPostagem}>
 
                 <div className="flex flex-col gap-2">
                     <label htmlFor="titulo">Título do Produto</label>
                     <input
                         type="text"
-                        placeholder="Título"
-                        name="descricao"
+                        placeholder="Titulo"
+                        name="nomeProduto"
                         className="border-2 border-slate-700 rounded p-2"
                         value={produto.nomeProduto}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -163,19 +163,34 @@ function FormProduto() {
                     <input
                         type="text"
                         placeholder="Texto"
-                        name="texto"
+                        name="descricao"
                         className="border-2 border-slate-700 rounded p-2"
                         value={produto.descricao}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                         required
                         minLength={10}
                         maxLength={1000}
-                        onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('A descrição deve ter no mínimo 10 e no máximo 1000 caracteres!')}
+                        onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('O Título deve ter no mínimo 10 e no máximo 1000 caracteres!')}
                         onInput={e => (e.target as HTMLInputElement).setCustomValidity('')}
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <p>Categoria da Produto</p>
+                    <label htmlFor="texto">Preço</label>
+                    <input
+                        type="number"
+                        min="0.00"
+                        max="10000.00"
+                        step="0.01"
+                        placeholder="Texto"
+                        name="preco"
+                        className="border-2 border-slate-700 rounded p-2"
+                        value={produto.preco}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        required
+                    />
+                </div>
+                <div className="flex flex-col gap-2">
+                    <p>Categoria do Produto</p>
                     <select name="categoria" id="categoria"
                         className='border p-2 border-slate-800 rounded'
                         onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}
@@ -190,7 +205,7 @@ function FormProduto() {
                 </div>
                 <button
                     type='submit'
-                    disabled={carregandoCategoria}
+                    disabled={carregandoCategorias}
                     className='rounded disabled:bg-slate-200 bg-indigo-400 
                             hover:bg-indigo-800 text-white font-bold w-1/2 
                             mx-auto py-2 flex justify-center'
