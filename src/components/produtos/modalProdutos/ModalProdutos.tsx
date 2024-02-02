@@ -2,7 +2,7 @@ import Popup from 'reactjs-popup';
 import FormProdutos from '../formProdutos/FormProdutos';
 
 import 'reactjs-popup/dist/index.css';
-import './ModalProdutos.css'
+import './ModalProdutos.css';
 
 function ModalProdutos() {
     return (
