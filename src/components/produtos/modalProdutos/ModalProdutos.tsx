@@ -1,10 +1,10 @@
 import Popup from 'reactjs-popup';
-import FormularioPostagem from '../formProdutos/FormProdutos';
+import FormProdutos from '../formProdutos/FormProdutos';
 
 import 'reactjs-popup/dist/index.css';
-import './ModalPostagem.css'
+import './ModalProdutos.css'
 
-function ModalPostagem() {
+function ModalProdutos() {
     return (
         <>
             <Popup
@@ -17,4 +17,4 @@ function ModalPostagem() {
     );
 }
 
-export default ModalPostagem;
+export default ModalProdutos;
