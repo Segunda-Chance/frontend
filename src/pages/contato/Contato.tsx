@@ -132,7 +132,7 @@ function Contato() {
                         {/* Vinicius */}
                         <figure className="snip1344  bg-rosa_2 object-cover"><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Vinicius.png?updatedAt=1706471202692" alt="profile-sample6" className="background" /><img src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Vinicius.png?updatedAt=1706471202692" alt="profile-sample6" className="profile" />
                             <figcaption>
-                                <h3>Vinicius Monteiro<span>Desenvolvedor FullStack Jr | Analista de Sistemas</span></h3>
+                                <h3>Vinicius Monteiro<span>Desenvolvedor FullStack Jr | Analista de Siscategorias</span></h3>
                                 <div className="icons w-full flex gap-3 justify-center">
                                     <a href="https://www.linkedin.com/in/viniciusmcsilva/" className="linkedinLogo">
                                         <span className="flex">
