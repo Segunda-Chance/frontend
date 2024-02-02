@@ -153,13 +153,13 @@ function FormProduto() {
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                         required
                         minLength={5}
-                        maxLength={100}
+                        maxLength={50}
                         onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('O Título deve ter no mínimo 5 e no máximo 100 caracteres!')}
                         onInput={e => (e.target as HTMLInputElement).setCustomValidity('')}
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="texto">Texto do Produto</label>
+                    <label htmlFor="texto">Descriçao Produto</label>
                     <input
                         type="text"
                         placeholder="Descrição"
@@ -170,6 +170,36 @@ function FormProduto() {
                         required
                         minLength={10}
                         maxLength={1000}
+                        onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('A descrição deve ter no mínimo 10 e no máximo 1000 caracteres!')}
+                        onInput={e => (e.target as HTMLInputElement).setCustomValidity('')}
+                    />
+                </div>
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="texto">Preço</label>
+                    <input
+                        type="number"
+                        placeholder="Preço"
+                        name="preco"
+                        className="border-2 border-slate-700 rounded p-2"
+                        value={produto.preco}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        required
+                        minLength={0.1}
+                        step="any"
+                        onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('A descrição deve ter no mínimo 10 e no máximo 1000 caracteres!')}
+                        onInput={e => (e.target as HTMLInputElement).setCustomValidity('')}
+                    />
+                </div>
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="texto">Foto Produto</label>
+                    <input
+                        type="text"
+                        placeholder="Foto"
+                        name="foto"
+                        className="border-2 border-slate-700 rounded p-2"
+                        value={produto.foto}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        required
                         onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('A descrição deve ter no mínimo 10 e no máximo 1000 caracteres!')}
                         onInput={e => (e.target as HTMLInputElement).setCustomValidity('')}
                     />
