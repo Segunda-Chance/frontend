@@ -1,9 +1,9 @@
-import { useState, useContext, useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
+import { RotatingLines } from "react-loader-spinner"
 import { useNavigate, useParams } from "react-router-dom"
 import { AuthContext } from "../../../contexts/AuthContext"
 import Produto from "../../../models/Produto"
 import { buscar, deletar } from "../../../services/Service"
-import { RotatingLines } from "react-loader-spinner"
 
 function DeletarProduto() {
 

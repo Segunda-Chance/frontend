@@ -4,7 +4,7 @@ function Home() {
 
     return (
         <>
-            <div id="container"  className="bg-neutro_2 container-home 
+            <div id="container" className="bg-neutro_2 container-home 
             bg-orange-200 
             flex 
             justify-center
@@ -28,7 +28,7 @@ function Home() {
                         ">Seja Bem Vinde ao Projeto Segunda Chance!</h2>
 
                         <div className="flex justify-around gap-4">
-                            
+
                             <button className='rounded bg-white text-orange-400 py-2 px-4'>Saiba mais sobre</button>
                         </div>
                     </div>
