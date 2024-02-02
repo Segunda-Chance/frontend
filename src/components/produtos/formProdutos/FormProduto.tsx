@@ -17,8 +17,8 @@ function FormProduto() {
         id: 0,
         nomeCategoria: '',
         tipo:'',
-        
     })
+
     const carregandoCategoria = categoria.tipo === '';
 
     const [produto, setProduto] = useState<Produto>({} as Produto)
@@ -72,7 +72,7 @@ function FormProduto() {
             ...produto,
             categoria: categoria,
         })
-    }, [categorias])
+    }, [categoria])
 
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
         setProduto({
@@ -146,10 +146,10 @@ function FormProduto() {
                     <label htmlFor="titulo">Título do Produto</label>
                     <input
                         type="text"
-                        placeholder="Descricao"
-                        name="descricao"
+                        placeholder="Nome Produto"
+                        name="nomeProduto"
                         className="border-2 border-slate-700 rounded p-2"
-                        value={produto.descricao}
+                        value={produto.nomeProduto}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                         required
                         minLength={5}
@@ -162,8 +162,8 @@ function FormProduto() {
                     <label htmlFor="texto">Texto do Produto</label>
                     <input
                         type="text"
-                        placeholder="Texto"
-                        name="texto"
+                        placeholder="Descrição"
+                        name="descricao"
                         className="border-2 border-slate-700 rounded p-2"
                         value={produto.descricao}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}

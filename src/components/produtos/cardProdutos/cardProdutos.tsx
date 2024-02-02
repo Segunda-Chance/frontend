@@ -16,7 +16,7 @@ function CardProduto({ produto }: CardProdutoProps) {
           <h3 className='text-lg font-bold text-center uppercase'>{produto.usuario?.nomeUsuario}</h3>
         </div>
         <div className='p-4 '>
-          <h4 className='text-lg font-semibold uppercase'>{produto.nomeProduto}</h4>
+          <h4 className='text-lg font-semibold uppercase'>{produto.descricao}</h4>
           <p>{produto.descricao}</p>
           <p>Categoria: {produto.categoria?.tipo}</p>
         </div>

@@ -4,7 +4,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import { buscar } from "../../../services/Service";
 import { DNA } from "react-loader-spinner";
-import CardProdutos from "../cardProdutos/cardProdutos";
+import CardProdutos from "../cardProdutos/CardProdutos";
 
 
 function ListarProdutos() {
