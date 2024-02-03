@@ -41,7 +41,7 @@ function Login() {
           {/* Usuario */}
           <div className="user-box">
             <input type="e-mail" id="usuario" name="usuario" value={usuarioLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
-            <label className="pt-2" htmlFor="usuario">Usuario</label>
+            <label className=" text-2xl" htmlFor="usuario">Usuario</label>
           </div>
 
           {/* Senha */}

@@ -111,13 +111,13 @@ function FormCategoria() {
                         <input id="input-1" autoFocus type="text" name='tipo' placeholder="Calçado" required value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
                         <label htmlFor="input-1">
                             <span className="label-text">Tipo Categoria</span>
-                            <span className="nav-dot"></span>
+                            <span className=""></span>
                             <div className="signup-button-trigger">Cadastrar Categoria</div>
                         </label>
                         <input id="input-2" type="text" name='nomeCategoria' placeholder="Tênis" required value={categoria.nomeCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
                         <label htmlFor="input-2">
                             <span className="label-text">Nome Categoria</span>
-                            <span className="nav-dot"></span>
+                            <span className=""></span>
                         </label>
                             <button id="buttonCategoria" className='w-1/2 py-2 flex justify-center' >
                                 {isLoading ? 

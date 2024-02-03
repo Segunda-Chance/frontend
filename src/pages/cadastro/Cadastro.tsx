@@ -79,7 +79,7 @@ function Cadastro() {
           {/*  Nome */}
           <div className="user-box">
             <input type="text" id="nomeUsuario" name="nomeUsuario" value={usuario.nomeUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
-            <label htmlFor="nome">Nome</label>
+            <label className='text-2xl' htmlFor="nome">Nome</label>
           </div>
 
           {/* Usuario */}

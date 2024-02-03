@@ -20,7 +20,7 @@
   outline: 0;
   background: transparent;
   color: #000000;
-  font-size: 2.1rem;
+  font-size: 2rem;
   line-height: 2rem;
   letter-spacing: .125rem;
   transition: all .5s cubic-bezier(.4, .25, .8, .3);
@@ -39,7 +39,7 @@
   background: #C04140;
   color: rgba(#000000, 0.85);
   font-size: 2rem;
-  line-height: 3.6rem;
+  line-height: 3rem;
   letter-spacing: .0625rem;
   box-shadow: 0 3px 5px 1px rgba(#000, 0.25);
   text-shadow: 0 -2px 0 rgba(#000, 0.25), 0 1px 0 rgba(#000000, 0.2);
@@ -130,40 +130,6 @@ input:focus + label .nav-dot:before {
   letter-spacing: .125rem;
   pointer-events: none;
   transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
-}
-
-.nav-dot {
-  cursor: pointer;
-  position: fixed;
-  padding: .625rem 1.25rem .625rem .625rem;  
-  top: 350px;
-  right: 1.25rem;
-  &:before {
-    content: '';  
-    display: inline-block;  
-    border-radius: 50%;
-    width: .375rem;
-    height: .375rem;
-    margin-right: .625rem;  
-    position: fixed;
-    background-color: lighten(#2b4b5d, 3%);
-    border: 0;
-    transition: all 0.25s;
-  }
-  &:hover:before {
-    width: .625rem;
-    height: .625rem;
-    margin-top: -.125rem;
-    margin-left: -.125rem;
-    background-color: darken(#ac1818, 5%);
-    align-items: center;
-  }
-}
-
-@for $i from 1 through 5 {
-  label[for="input-#{$i}"] .nav-dot {
-      margin-top: -150px + (25 * $i);
-  }
 }
 
 html, body {
