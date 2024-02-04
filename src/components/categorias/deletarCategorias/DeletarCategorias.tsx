@@ -4,6 +4,7 @@ import { RotatingLines } from "react-loader-spinner";
 import { buscar, deletar } from "../../../services/Service";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Categoria from "../../../models/Categoria";
+import './DeletarCategorias.css'
 
 function DeletarCategorias() {
 
@@ -71,37 +72,36 @@ function DeletarCategorias() {
     }
 
     return (
-        <div className='container w-1/3 mx-auto'>
+        <div className='w-full'>
             <h1 className='text-4xl text-center my-4'>Deletar Categoria</h1>
-
-            <p className='text-center font-semibold mb-4'>
+            <p className='text-center mb-4 text-2xl'>
                 Você tem certeza de que deseja apagar o Categoria?
             </p>
+             <div className="cardDelete m-auto">
+                {/* Tipo da Categoria */}
+                <div className="texto">
+                    <h3 className="text-2xl text-center shadowW" >TIPO</h3>
+                     <span className="text-xl text-center text-neutro_2 text shadowB">{categoria.tipo}</span>
+                </div>
 
-            <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-                <header className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>
-                    Categoria
-                </header>
-                <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.nomeCategoria}</p>
+                {/* Nome Categoria */}
+                <div className="texto">
+                    <h3 className="text-2xl text-center shadowW">CATEGORIA</h3>
+                     <span className="text-xl text-center text-neutro_2 shadowB">{categoria.nomeCategoria}</span>
+                </div>    
 
-                <header className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>
-                    Tipo
-                </header>
-                <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.tipo}</p>
-
-                <div className="flex">
-
-                    <button
-                        className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2'
-                        onClick={retornar}>
+                
+                {/* Edit e Delete */}
+                <div className="icons">
+                {/*  No */}
+                    <button className="btn" onClick={retornar}>
                         Não
                     </button>
 
-                    <button
-                        className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-600 
-                            flex items-center justify-center'
-                        onClick={deletarCategoria}>
+                    {/* Yes */}
 
+                    
+                    <button className="btn" onClick={deletarCategoria}>
                         {isLoading ?
                             <RotatingLines
                                 strokeColor="white"
@@ -113,7 +113,6 @@ function DeletarCategorias() {
                             <span>Sim</span>
                         }
                     </button>
-
                 </div>
             </div>
         </div>
