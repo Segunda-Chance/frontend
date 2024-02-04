@@ -67,7 +67,7 @@ function DeletarCategorias() {
     }
 
     function retornar() {
-        navigate("/categorias")
+        navigate("/cadastrarCategoria")
     }
 
     return (
