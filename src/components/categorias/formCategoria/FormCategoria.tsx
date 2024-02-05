@@ -6,6 +6,7 @@ import { RotatingLines } from "react-loader-spinner";
 import { AuthContext } from "../../../contexts/AuthContext"
 import './FormCategoria.css'
 import ListaCategorias from "../listaCategorias/ListaCategorias";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 function FormCategoria() {
 
@@ -29,7 +30,7 @@ function FormCategoria() {
             })
         } catch (error: any) {
             if (error.toString().includes('403')) {
-                alert('O token expirou, favor logar novamente')
+                ToastAlerta('O token expirou, favor logar novamente', 'info')
                 handleLogout()
             }
         }
@@ -61,14 +62,14 @@ function FormCategoria() {
                         }
                     })
                     
-                    alert('Categoria atualizado com sucesso')
+                    ToastAlerta('Categoria atualizado com sucesso', 'sucesso')
     
                 } catch (error: any) {
                     if (error.toString().includes('403')) {
-                        alert('O token expirou, favor logar novamente')
+                        ToastAlerta('O token expirou, favor logar novamente', 'info')
                         handleLogout()
                     } else {
-                        alert('Erro ao atualizar o Categoria')
+                        ToastAlerta('Erro ao atualizar o Categoria', "erro")
                     }
                 }
     
@@ -80,14 +81,14 @@ function FormCategoria() {
                         }
                     })
     
-                    alert('Categoria cadastrado com sucesso')
+                    ToastAlerta('Categoria cadastrado com sucesso', 'sucesso')
     
                 } catch (error: any) {
                     if (error.toString().includes('403')) {
-                        alert('O token expirou, favor logar novamente')
+                        ToastAlerta('O token expirou, favor logar novamente', "info")
                         handleLogout()
                     } else {
-                        alert('Erro ao cadastrar a Categoria')
+                        ToastAlerta('Erro ao cadastrar a Categoria', "erro")
                     }
                 }
             }

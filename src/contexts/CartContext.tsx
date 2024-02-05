@@ -29,7 +29,7 @@ export function CartProvider({ children }: CartProviderProps) {
     function adicionarProduto(produto: Produto) {
         const indice = items.find(items => items.id === produto.id)
         if (indice !== undefined) {
-            alert('Este Produto já foi Adicionado!',)
+            ToastAlerta('Este Produto já foi Adicionado!', 'info')
         } else {
             setItems(state => [...state, produto])
             ToastAlerta('Produto Adicionado!', 'sucesso')

@@ -5,6 +5,7 @@ import { buscar, deletar } from "../../../services/Service";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Categoria from "../../../models/Categoria";
 import './DeletarCategorias.css'
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 function DeletarCategorias() {
 
@@ -28,7 +29,7 @@ function DeletarCategorias() {
 
         } catch (error: any) {
             if (error.toString().includes('403')) {
-                alert('O token expirou, favor logar novamente')
+                ToastAlerta('O token expirou, favor logar novamente', "info")
                 handleLogout()
             }
         }
@@ -36,7 +37,7 @@ function DeletarCategorias() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado')
+            ToastAlerta('Você precisa estar logado', "info")
             navigate('/login')
         }
     }, [token])
@@ -57,10 +58,10 @@ function DeletarCategorias() {
                 }
             })
 
-            alert('Apagado com sucesso')
+            ToastAlerta('Apagado com sucesso', "sucesso")
 
         } catch (error) {
-            alert('Erro ao apagar a Categoria')
+            ToastAlerta('Erro ao apagar a Categoria', "erro")
         }
 
         setIsLoading(false)
