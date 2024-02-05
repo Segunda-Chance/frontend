@@ -15,11 +15,14 @@ import Sobre from './pages/sobre/Sobre'
 import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto'
 import FormProduto from './components/produtos/formProdutos/FormProduto'
 import ListarProdutos from './components/produtos/listarProdutos/ListarProdutos'
+import Cart from './components/produtos/cart/Cart'
+import { CartProvider } from './contexts/CartContext'
 
 
 function App() {
   return (
     <>
+    <CartProvider>
       <AuthProvider>
         <BrowserRouter>
           <Navbar />
@@ -39,12 +42,13 @@ function App() {
               <Route path="/cadastroProduto" element={<FormProduto />} />
               <Route path="/editarproduto/:id" element={<FormProduto />} />
               <Route path="/produtos" element={<ListarProdutos />} />
-
+              <Route path="/cart" element={<Cart />} />
             </Routes>
           </div>
           <Footer />
         </BrowserRouter>
       </AuthProvider>
+      </CartProvider>
     </>
   )
 }
