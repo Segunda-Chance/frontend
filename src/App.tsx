@@ -17,6 +17,7 @@ import FormProduto from './components/produtos/formProdutos/FormProduto'
 import ListarProdutos from './components/produtos/listarProdutos/ListarProdutos'
 import Cart from './components/produtos/cart/Cart'
 import { CartProvider } from './contexts/CartContext'
+import Perfil from './pages/perfil/Perfil'
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
               <Route path="/editarproduto/:id" element={<FormProduto />} />
               <Route path="/produtos" element={<ListarProdutos />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/perfil" element={<Perfil />} />
             </Routes>
           </div>
           <Footer />
