@@ -52,7 +52,7 @@ function ListaCategorias(){
         )}
             <div className="flex justify-center w-full my-1">
                 <div className=" flex flex-col">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-7">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
                         <>
                             {categorias.map((categoria) => (
                                 <>

@@ -1,3 +1,4 @@
+import ListarProdutos from "../../components/produtos/listarProdutos/ListarProdutos"
 import "./Home.css"
 
 function Home() {
@@ -40,6 +41,12 @@ function Home() {
                             className="w-2/3 "
                         />
                     </div>
+                </div>
+            </div>
+
+            <div className="containerProdutos">
+                <div className="containerP">
+                    <ListarProdutos/>
                 </div>
             </div>
         </>

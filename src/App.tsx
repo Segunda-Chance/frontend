@@ -38,7 +38,7 @@ function App() {
               <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
               <Route path="/cadastroProduto" element={<FormProduto />} />
               <Route path="/editarproduto/:id" element={<FormProduto />} />
-              <Route path="/produtos" element={<ListarProdutos />} />
+              <Route path="/produtos" element={<ListarProdutos/>} />
 
             </Routes>
           </div>
