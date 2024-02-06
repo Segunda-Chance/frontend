@@ -89,7 +89,7 @@ function FormProduto() {
     }
 
     function retornar() {
-        navigate('/produtos');
+        navigate('/');
     }
 
     async function gerarNovaPostagem(e: ChangeEvent<HTMLFormElement>) {

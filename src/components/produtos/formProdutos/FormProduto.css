@@ -57,16 +57,19 @@
   z-index: 10;
 }
 
-input:focus ~ label .label-text {
+input:focus ~ label .label-text,
+select:focus ~ label .label-text {
   transform: translate(-40%, 300%);
   transition: all .5s ease-in;
 }
 
-input:focus ~ .tip {
+input:focus ~ .tip,
+select:focus ~ .tip  {
   opacity: 1;
 }
 input:focus ~ .signup-button,
-button:focus ~ .signup-button {
+button:focus ~ .signup-button,
+select:focus ~ .signup-button {
   opacity: 0;
 }
 

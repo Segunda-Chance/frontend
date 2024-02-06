@@ -1,3 +1,8 @@
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Quicksand:wght@300&family=Roboto+Condensed:wght@100&display=swap');
+
+
 .container-sobre{
     padding-top: 120px;
+    font-family: "Quicksand";
+    font-weight: 600;
 }
