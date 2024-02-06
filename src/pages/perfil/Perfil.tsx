@@ -25,9 +25,7 @@ function Perfil() {
                 className='w-full h-72 object-cover border-b-8 border-white' 
                 src="https://i.imgur.com/ZZFAmzo.jpg" alt="Capa do Perfil" />
 
-            <img 
-                className='rounded-full w-56 mx-auto mt-[-8rem] border-8 border-white relative z-10' 
-                src={usuario.foto} alt={`Foto de perfil de ${usuario.nomeUsuario}`} />
+                <img src={usuario.foto} alt={`Foto de perfil de ${usuario.nomeUsuario}`} className='rounded-full w-56 mx-auto mt-[-8rem] border-8 border-white relative z-10' />
 
             <div 
                 className="relative mt-[-6rem] h-72 flex flex-col 
