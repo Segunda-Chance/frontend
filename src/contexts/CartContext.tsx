@@ -1,5 +1,6 @@
 import { createContext, ReactNode, useState } from "react";
 import Produto from "../models/Produto";
+import { ToastAlerta } from "../utils/ToastAlerta";
 
 
 interface CartContextProps {
@@ -28,10 +29,10 @@ export function CartProvider({ children }: CartProviderProps) {
     function adicionarProduto(produto: Produto) {
         const indice = items.find(items => items.id === produto.id)
         if (indice !== undefined) {
-            alert('Este Produto já foi Adicionado!',)
+            ToastAlerta('Este Produto já foi Adicionado!', 'info')
         } else {
             setItems(state => [...state, produto])
-            alert('Produto Adicionado!',)
+            ToastAlerta('Produto Adicionado!', 'sucesso')
         }
     }
 
@@ -49,7 +50,7 @@ export function CartProvider({ children }: CartProviderProps) {
 
     // Função para Limpar o Carrinho
     function limparCart() {
-        alert('Compra Efetuada com Sucesso',)
+        ToastAlerta('Compra Efetuada com Sucesso', 'sucesso')
         setItems([])
     }
 

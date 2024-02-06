@@ -34,6 +34,9 @@ function Navbar() {
                     <Link to="/home" className=" hover:from-neutro_1 " >Home</Link>
                   </li>
                   <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                    <Link to="/perfil" className=" hover:from-neutro_1 " >Perfil</Link>
+                  </li>
+                  <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
                     <Link to="/cadastrarCategoria" className=" hover:from-neutro_1 " >Categoria</Link>
                   </li>
                   <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
