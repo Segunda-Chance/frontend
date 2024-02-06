@@ -4,11 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import { buscar } from "../../../services/Service";
-import CardProdutos from "../cardProdutos/CardProdutos";
-import { ToastAlerta } from "../../../utils/ToastAlerta";
+import CardEditProduto from "../cardProdutos/CardEditProduto";
 
 
-function ListarProdutos() {
+function ListarEditProdutos() {
 
     const navigate = useNavigate();
     const [produtos, setProdutos] = useState<Produto[]>([]);
@@ -25,7 +24,7 @@ function ListarProdutos() {
 
         } catch (error: any) {
             if (error.toString().includes('403')) {
-                ToastAlerta('O token expirou, favor logar novamente', 'info')
+                alert('O token expirou, favor logar novamente')
                 handleLogout()
             }
         }
@@ -33,7 +32,7 @@ function ListarProdutos() {
 
     useEffect(() => {
         if (token === '') {
-            ToastAlerta('Você precisa estar logado', 'info')
+            alert('Você precisa estar logado')
             navigate('/');
         }
     }, [token])
@@ -55,13 +54,13 @@ function ListarProdutos() {
                 />
             )}
             <div className='container mx-auto my-4 
-                grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
+                grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
                 {produtos.map((produto) => (
-                    <CardProduto key={produto.id} produto={produto} />
+                    <CardEditProduto key={produto.id} produto={produto} />
                 ))}
             </div>
         </>
     );
 }
 
-export default ListarProdutos;
+export default ListarEditProdutos;

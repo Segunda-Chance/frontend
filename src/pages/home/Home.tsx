@@ -1,6 +1,7 @@
+import ListarProdutos from "../../components/produtos/listarProdutos/ListarProdutos"
 import "./Home.css"
 import Carrossel from "../../components/carrossel/Carrossel"
-import ListarProdutos from "../../components/produtos/listarProdutos/ListarProdutos"
+
 
 function Home() {
 
@@ -9,7 +10,7 @@ function Home() {
         <div>
             <Carrossel />
         </div>
-        <ListarProdutos />
+            <ListarProdutos />
     </>
     )
 }
