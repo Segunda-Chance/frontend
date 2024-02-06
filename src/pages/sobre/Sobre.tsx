@@ -1,27 +1,85 @@
-import "./Sobre.css"
+import "./Sobre.css";
 
 function Sobre() {
-    return (
-        <div className="container-sobre">
-            <div className="container mx-auto p-4 text-center" >
-                <h1 className="text-3xl font-bold mb-4">Projeto Segunda Chance</h1>
-                <img
-                    className="mx-auto mb-4 rounded-full"
-                    src="https://ik.imagekit.io/id3pm8vmy/mendi.jpg?updatedAt=1705676331820"
-                    alt="Imagem do Projeto"
-                    width="500"
-                    height="150"
-                />
-                <p className="text-lg">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ab provident tenetur? Magnam molestias in corrupti quia doloremque voluptas sapiente cum, dignissimos officia doloribus facilis, corporis odit reiciendis amet quam?
-                </p>
-                <p><span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis reprehenderit amet debitis incidunt perspiciatis sit minima, modi eaque deleniti earum quos culpa error, nulla voluptatum adipisci blanditiis illo nihil totam!</span><span>Voluptatem impedit, omnis ad explicabo nemo porro sint eius dolorum architecto, quod, quaerat facilis inventore. Sunt quia quod dignissimos sapiente deleniti? Sint necessitatibus unde dolor dolores suscipit nobis neque perferendis?</span><span>Vitae, omnis? A beatae, ipsam cum incidunt accusantium repudiandae officia dolor molestias illum expedita magni neque. Voluptas deleniti, laboriosam officiis atque cumque sapiente eveniet, tempore recusandae hic similique, enim cupiditate.</span></p>
-            </div >
+  return (
+    <div className="container-sobre">
+      <div className="container mx-auto p-4 text-center flex flex-col items-center">
+        <h1 className="text-3xl font-bold mb-10">
+         O e-Commerce Solidário Transformando Vidas
+        </h1>
+
+        {/* Primeira Imagem */}
+        <div className="flex flex-col md:flex-row items-center mb-4 text-shadow">
+          <img
+            className="mx-auto mb-4 md:mb-0 rounded-full"
+            src="https://ik.imagekit.io/53urd0gwk/Segunda%20Chance/quimico.png?updatedAt=1707237585329"
+            alt="Imagem do Projeto"
+            width="300"
+            height="150"
+          />
+          <p className="text-lg md:ml-4 leading-7 text-justify mb-6 p-4 bg-white text-shadow">
+            Em conformidade com o Objetivo de Desenvolvimento Sustentável (ODS)
+            3 - Saúde e Bem-estar, o Projeto SegundaChance concentra-se na
+            abordagem do ODS 3.5, que busca reforçar a prevenção e o tratamento
+            do abuso de substâncias, incluindo drogas entorpecentes e uso nocivo
+            do álcool. As causas subjacentes a esse problema social incluem a
+            desestruturação da família, a falta de acesso a tratamento
+            psicológico de qualidade, a carência de atividades recreativas e o
+            aumento da taxa de mortalidade em crianças vulneráveis. Além disso, a
+            situação resulta em impactos socioeconômicos, aumento da violência,
+            prostituição, desigualdade e disseminação de doenças transmissíveis.
+          </p>
         </div>
-    )
+
+        {/* Segunda Imagem */}
+        <div className="flex flex-col md:flex-row items-center mb-4">
+          <img
+            className="mx-auto mb-4 md:mb-0 rounded-full"
+            src="https://ik.imagekit.io/53urd0gwk/Segunda%20Chance/e-comerce.png?updatedAt=1707236142602"
+            alt="Imagem do Projeto"
+            width="300"
+            height="150"
+          />
+          <p className="text-lg md:ml-4 leading-7 text-justify mb-6 p-4 bg-white text-shadow">
+            O Projeto SegundaChance optou por enfrentar esses desafios sociais
+            por meio de um e-Commerce inovador, um Marketplace que visa
+            conectar ONGs dedicadas ao tratamento de dependentes químicos com uma
+            audiência mais ampla. Essa escolha estratégica é motivada pela
+            necessidade de proporcionar às ONGs uma plataforma eficaz para
+            anunciar seus produtos, arrecadar fundos essenciais para seus
+            projetos sociais e, assim, ampliar o alcance de sua missão de
+            reabilitação.
+          </p>
+        </div>
+
+        {/* Terceira Imagem */}
+        <div className="flex flex-col md:flex-row items-center mb-4">
+          <img
+            className="mx-auto mb-4 md:mb-0 rounded-full"
+            src="https://ik.imagekit.io/53urd0gwk/Segunda%20Chance/desing.png?updatedAt=1707236124313"
+            alt="Imagem do Projeto"
+            width="300"
+            height="150"
+          />
+          <p className="text-lg md:ml-4 leading-7 text-justify mb-6 p-4 bg-white text-shadow">
+            O e-Commerce Solidário proposto pelo Projeto desempenhará um papel
+            crucial na solução do problema social identificado. Ao oferecer às
+            ONGs uma vitrine digital, a plataforma proporcionará maior
+            visibilidade a seus produtos, alcançando um público mais amplo.
+            Essa visibilidade adicional se traduzirá em maior arrecadação de
+            fundos, permitindo que as organizações expandam suas iniciativas e
+            intensifiquem os esforços para reabilitação de dependentes químicos.
+            Ao apoiar essas ONGs, o Projeto SegundaChance busca verdadeiramente
+            oferecer uma segunda chance a indivíduos em situação de
+            vulnerabilidade.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Sobre
+export default Sobre;
 
 
 
