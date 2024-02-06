@@ -21,19 +21,26 @@ function Perfil() {
     }, [usuario.token])
 
     return (
-        <div className='container mx-auto mt-4 rounded-2xl overflow-hidden'>
-
-            <img  className='w-full h-72 object-cover border-b-8 border-white' src="https://i.imgur.com/ZZFAmzo.jpg" alt="Capa do Perfil" />
-            <img src={usuario.foto} alt={usuario.nomeUsuario} className='rounded-full w-56 mx-auto mt-[-8rem] border-8 border-white relative z-10'  />
+        <div className='container mx-auto mt-4 rounded-2xl overflow-hidden relative'>
+        <img 
+            className='object-cover border-white' 
+            src="https://ik.imagekit.io/53urd0gwk/Segunda%20Chance/baner2.png?updatedAt=1707248808778" 
+            alt="Capa do Perfil" />
+    
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20'>
+            <img 
+                className='rounded-full w-56 h-20 mx-auto border-white' 
+                src={usuario.foto} 
+                alt={`Foto de perfil de ${usuario.nomeUsuario}`} />
+    
             <div 
-                className="relative mt-[-6rem] h-72 flex flex-col 
-                    bg-sky-500 text-white text-2xl items-center justify-center"
-            >
+                className="mt-4 h-32 flex flex-col bg-sky-500 text-white text-2xl items-center justify-center">
                 <p>Nome: {usuario.nomeUsuario} </p>
                 <p>Email: {usuario.usuario}</p>
             </div>
-
         </div>
+    </div>
+    
     )
 }
 
