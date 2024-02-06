@@ -34,7 +34,7 @@ function Login() {
 
   return (
     <>
-      <div className="login-box">
+      <div className="login-box md-10">
         <h2>Login</h2>
         <form onSubmit={login}>
 
