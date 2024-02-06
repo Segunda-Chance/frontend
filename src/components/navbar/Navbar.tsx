@@ -12,7 +12,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="  bg-neutro_2 flex flex-col w-full  justify-between py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4">
+      <div className="  bg-neutro_2 flex flex-col w-full  justify-between py-2  dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4">
       <div className="relative navSuperior flex w-full flex-wrap items-center pr-8 justify-between">
           {/* Div Central Logo */}
           <div className="   logo-segundachance items-end content-center justify-center m-auto">

@@ -9,7 +9,7 @@ function NavbarInferior() {
   return (
     <div >
     {/* Nav Direita */}
-    <nav className="flex-no-wrap relative flex w-full items-center  bg-rosa_1 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4">
+    <nav className="flex-no-wrap relative flex w-full items-center  bg-rosa_1  dark:bg-neutral-600  lg:flex-wrap lg:justify-start lg:py-4">
       <div className="flex w-full flex-wrap items-center px-3">
         <div className=" relative m-auto basis-[100%] lg:!flex lg:basis-auto items-center h-1" id="navbarSupportedContent1" data-te-collapse-item>
           <ul className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
