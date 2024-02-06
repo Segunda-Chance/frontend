@@ -1,11 +1,11 @@
 import { useContext, useEffect, useState } from "react";
-import { DNA } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import { buscar } from "../../../services/Service";
-import CardProdutos from "../cardProdutos/CardProdutos";
 import { ToastAlerta } from "../../../utils/ToastAlerta";
+import CardProduto from "../cardProdutos/CardProduto";
+import Animacao from "../../loader/Loader";
 
 
 function ListarProdutos() {
@@ -44,15 +44,11 @@ function ListarProdutos() {
 
     return (
         <>
+        
             {produtos.length === 0 && (
-                <DNA
-                    visible={true}
-                    height="200"
-                    width="200"
-                    ariaLabel="dna-loading"
-                    wrapperStyle={{}}
-                    wrapperClass="dna-wrapper mx-auto"
-                />
+
+                <Animacao/>
+                
             )}
             <div className='container mx-auto my-4 
                 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>

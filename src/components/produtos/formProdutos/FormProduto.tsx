@@ -5,14 +5,11 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Categoria from "../../../models/Categoria";
 import Produto from "../../../models/Produto";
 import { atualizar, buscar, cadastrar } from "../../../services/Service";
-<<<<<<< HEAD
 import { ToastAlerta } from "../../../utils/ToastAlerta";
-=======
 import "./FormProduto.css"
 import ListarEditProdutos from "../listarProdutos/ListarEditProdutos";
 
 
->>>>>>> 7fa920ec23d398c073321ac1e861b6ec7971d318
 
 function FormProduto() {
 

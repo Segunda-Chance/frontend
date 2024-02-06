@@ -4,12 +4,9 @@ import { useNavigate, useParams } from "react-router-dom"
 import { AuthContext } from "../../../contexts/AuthContext"
 import Produto from "../../../models/Produto"
 import { buscar, deletar } from "../../../services/Service"
-<<<<<<< HEAD
 import { ToastAlerta } from "../../../utils/ToastAlerta"
-=======
 import CardProdutos from "../cardProdutos/CardProduto"
 import './DeletarProduto.css'
->>>>>>> 7fa920ec23d398c073321ac1e861b6ec7971d318
 
 function DeletarProduto() {
 
