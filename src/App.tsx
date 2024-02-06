@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import DeletarCategorias from './components/categorias/deletarCategorias/DeletarCategorias'
 import FormCategoria from './components/categorias/formCategoria/FormCategoria'
-import ListaCategorias from './components/categorias/listaCategorias/ListaCategorias'
 import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
 import { AuthProvider } from './contexts/AuthContext'
@@ -19,6 +18,8 @@ import { CartProvider } from './contexts/CartContext'
 import Perfil from './pages/perfil/Perfil'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import FormCatList from './components/categorias/categoriaDetalhes/FormCatList'
+
 
 
 
@@ -40,7 +41,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/cadastrarCategoria" element={<FormCategoria />} />
                 <Route path="/editarCategoria/:id" element={<FormCategoria />} />
-                <Route path="/categorias" element={<ListaCategorias />} />
+                <Route path="/categorias" element={<FormCatList/>} />
                 <Route path="/deletarCategoria/:id" element={<DeletarCategorias />} />
                 <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
                 <Route path="/cadastroProduto" element={<FormProduto />} />

@@ -17,7 +17,7 @@ function Navbar() {
           {/* Div Central Logo */}
           <div className="   logo-segundachance items-end content-center justify-center m-auto">
             <Link to="/home" className="flex relative items-center">
-              <img className="logoImg h-15" src="https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/s.png?updatedAt=1706140304412" alt="" />
+              <img className="logoImg h-15" src="https://ik.imagekit.io/53urd0gwk/Segunda%20Chance/final--1.png?updatedAt=1707238827358" alt="" />
               <h1 className="temaLogo">Segunda Chance</h1>
             </Link>
           </div>

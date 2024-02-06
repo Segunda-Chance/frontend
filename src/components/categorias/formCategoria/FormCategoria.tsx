@@ -5,7 +5,6 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Categoria from "../../../models/Categoria";
 import { atualizar, buscar, cadastrar } from "../../../services/Service";
 import { ToastAlerta } from "../../../utils/ToastAlerta";
-import ListaCategorias from "../listaCategorias/ListaCategorias";
 
 interface FormularioCategoriaProps {
     setCategorias?: (value: Categoria[]) => void
@@ -108,9 +107,9 @@ function FormCategoria({ categorias, setCategorias }: FormularioCategoriaProps) 
 
     // Alterar rota de retorno
     function retornar() {
-        navigate("/cadastrarCategoria")
+        navigate("/categorias")
     }
-    
+
 
     return (
         <>
@@ -145,10 +144,6 @@ function FormCategoria({ categorias, setCategorias }: FormularioCategoriaProps) 
                     <p className="tip">Aperte Tab</p>
                     <div className="signup-button" >{id === undefined ? 'Cadastrar' : 'Atualizar'}</div>
                 </form>
-            </div>
-
-            <div className="mt-40 pt-5 pb-10">
-                <ListaCategorias />
             </div>
         </>
     );
