@@ -1,6 +1,6 @@
 import { useEffect } from "react"
-import { DNA } from "react-loader-spinner"
 import Categoria from "../../../models/Categoria"
+import Loader from "../../loader/Loader"
 import CardCategoria from "../cardcategoria/CardCategoria"
 
 
@@ -17,16 +17,9 @@ function ListaCategorias({ categorias, getCategorias }: ListaCategoriasProps) {
 
     return (
         <>
-            {categorias.length === 0 && (
-                <DNA
-                    visible={true}
-                    height="200"
-                    width="200"
-                    ariaLabel="dna-loading"
-                    wrapperStyle={{}}
-                    wrapperClass="dna-wrapper mx-auto"
-                />
-            )}
+        {categorias.length === 0 && (
+            <Loader />
+        )}
             <div className="flex justify-center w-full my-1">
                 <div className=" flex flex-col">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">

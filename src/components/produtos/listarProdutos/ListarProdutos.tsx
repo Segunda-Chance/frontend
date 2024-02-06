@@ -5,7 +5,7 @@ import Produto from "../../../models/Produto";
 import { buscar } from "../../../services/Service";
 import { ToastAlerta } from "../../../utils/ToastAlerta";
 import CardProduto from "../cardProdutos/CardProduto";
-import Animacao from "../../loader/Loader";
+import Loader from "../../loader/Loader";
 
 
 function ListarProdutos() {
@@ -46,15 +46,14 @@ function ListarProdutos() {
         <>
         
             {produtos.length === 0 && (
-
-                <Animacao/>
-                
+                <Loader/>    
             )}
-            <div className='container mx-auto my-4 
-                grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
-                {produtos.map((produto) => (
-                    <CardProduto key={produto.id} produto={produto} />
-                ))}
+            <div className="flex">
+                <div className=' mx-auto my-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5'>
+                    {produtos.map((produto) => (
+                        <CardProduto key={produto.id} produto={produto} />
+                    ))}
+                </div>
             </div>
         </>
     );

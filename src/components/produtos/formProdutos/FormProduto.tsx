@@ -89,7 +89,7 @@ function FormProduto() {
     }
 
     function retornar() {
-        navigate('/produtos');
+        navigate('/');
     }
 
     async function gerarNovaPostagem(e: ChangeEvent<HTMLFormElement>) {
@@ -211,10 +211,9 @@ function FormProduto() {
                     </form>
                 </div>
 
-                <div className="mt-36 pt-5 pb-5">
-                    <ListarEditProdutos/>   
+                <div className=" fle mt-36 m-full pb-5 ">
+                        <ListarEditProdutos/>      
                 </div>
-
         </>
     );
 }

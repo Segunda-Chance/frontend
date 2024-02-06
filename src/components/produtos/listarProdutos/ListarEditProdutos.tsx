@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
-import { DNA } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import { buscar } from "../../../services/Service";
 import CardEditProduto from "../cardProdutos/CardEditProduto";
+import Loader from "../../loader/Loader";
 
 
 function ListarEditProdutos() {
@@ -44,21 +44,16 @@ function ListarEditProdutos() {
     return (
         <>
             {produtos.length === 0 && (
-                <DNA
-                    visible={true}
-                    height="200"
-                    width="200"
-                    ariaLabel="dna-loading"
-                    wrapperStyle={{}}
-                    wrapperClass="dna-wrapper mx-auto"
-                />
+                <Loader />
             )}
-            <div className='container mx-auto my-4 
-                grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
-                {produtos.map((produto) => (
-                    <CardEditProduto key={produto.id} produto={produto} />
-                ))}
-            </div>
+            
+                <div className=" flex m-auto w-4/5">
+                    <div className=' m-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'>
+                        {produtos.map((produto) => (
+                            <CardEditProduto key={produto.id} produto={produto}/>
+                        ))}
+                    </div>
+                </div>
         </>
     );
 }

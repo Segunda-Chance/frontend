@@ -2,9 +2,9 @@ import "./Sobre.css";
 
 function Sobre() {
   return (
-    <div className="container-sobre max-w-screen-lg">
-      <div className=" container mx-auto p-4 text-center flex flex-col items-center">
-        <h1 className="m-auto text-3xl font-bold mb-10 pl-72">
+    <div className="container-sobre w-full flex flex-col mb-24">
+      <div className=" flex flex-col w-3/6 m-auto">
+        <h1 className="m-auto text-3xl font-bold ">
          O e-Commerce Solidário Transformando Vidas
         </h1>
 

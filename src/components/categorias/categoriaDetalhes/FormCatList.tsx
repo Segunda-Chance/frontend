@@ -41,8 +41,8 @@ function FormCatList() {
             <div className='w-3/4 pb-4'>
                 <FormCategoria categorias={categorias} setCategorias={setCategorias} />
             </div>
-            <hr className="border-2 border-teal-800 rounded w-3/4 my-8"></hr>
-            <div className='w-full pb-4'>
+            
+            <div className='w-full pb-4 mt-40'>
                 <ListaCategorias categorias={categorias} getCategorias={buscarCategorias} />
             </div>
         </div>
