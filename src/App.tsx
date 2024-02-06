@@ -18,6 +18,7 @@ import { CartProvider } from './contexts/CartContext'
 import Perfil from './pages/perfil/Perfil'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import ContatoMensagem from './pages/contatomensagem/ContatoMensagem'
 import FormCatList from './components/categorias/categoriaDetalhes/FormCatList'
 
 
@@ -38,6 +39,7 @@ function App() {
                 <Route path="/contato" element={<Contato />} />
                 <Route path="/sobre" element={<Sobre />} />
                 <Route path="/cadastro" element={<Cadastro />} />
+                <Route path="/contatomensagem" element={<ContatoMensagem />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/cadastrarCategoria" element={<FormCategoria />} />
                 <Route path="/editarCategoria/:id" element={<FormCategoria />} />
