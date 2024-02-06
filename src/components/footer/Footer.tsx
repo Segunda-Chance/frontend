@@ -18,12 +18,11 @@ function Footer() {
             <li>
               <a href="https://brazil.generation.org/politica-de-privacidade/" className="hover:underline me-4 md:me-6">Política de Privacidade</a>
             </li>
-            <li>
+            <li >
               <Link to='/contato' className=" hover:underline mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                 Time de Desenvolvimento
               </Link>
             </li>
-
           </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />

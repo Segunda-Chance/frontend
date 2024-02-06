@@ -2,10 +2,10 @@ import {useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import Categoria from "../../../models/Categoria"
 import { AuthContext } from "../../../contexts/AuthContext"
-import { DNA } from "react-loader-spinner"
 import CardCategoria from "../cardcategoria/CardCategoria"
 import { buscar } from "../../../services/Service"
 import { ToastAlerta } from "../../../utils/ToastAlerta"
+import Loader from "../../loader/Loader"
 
 function ListaCategorias(){
     const navigate = useNavigate()
@@ -42,14 +42,7 @@ function ListaCategorias(){
     return (
         <>
         {categorias.length === 0 && (
-            <DNA
-            visible={true}
-            height="200"
-            width="200"
-            ariaLabel="dna-loading"
-            wrapperStyle={{}}
-            wrapperClass="dna-wrapper mx-auto"
-        />
+            <Loader />
         )}
             <div className="flex justify-center w-full my-1">
                 <div className=" flex flex-col">
