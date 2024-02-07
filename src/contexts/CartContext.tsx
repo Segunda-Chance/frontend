@@ -60,5 +60,5 @@ export function CartProvider({ children }: CartProviderProps) {
         >
             {children}
         </CartContext.Provider>
-    )
+    ) 
 }
