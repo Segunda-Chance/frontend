@@ -42,12 +42,17 @@ function Carrossel() {
 
                 <SwiperSlide>
                     <img className="swiper-slide-img"
-                        src='https://ik.imagekit.io/53urd0gwk/Segunda%20Chance/baner3.png?updatedAt=1707150345388'
+                        src='https://ik.imagekit.io/53urd0gwk/Segunda%20Chance/003.png?updatedAt=1707264046162'
                     />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img className="swiper-slide-img"
-                        src='https://ik.imagekit.io/53urd0gwk/Segunda%20Chance/baner2.png?updatedAt=1707150342321'
+                        src='https://ik.imagekit.io/53urd0gwk/Segunda%20Chance/002.png?updatedAt=1707263960318'
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img className="swiper-slide-img"
+                        src='https://ik.imagekit.io/53urd0gwk/Segunda%20Chance/001.png?updatedAt=1707263905298'
                     />
                 </SwiperSlide>
             </Swiper>

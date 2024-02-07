@@ -21,17 +21,9 @@ function Navbar() {
               <h1 className="temaLogo">Segunda Chance</h1>
             </Link>
           </div>
-        </div>   
-        
-        <div>
-        {/* Menu */}
-        
-        </div>
-     
-        <NavbarInferior/>
-
-        
+        </div>     
       </div>
+      <NavbarInferior/>
     </>
   );
 }
