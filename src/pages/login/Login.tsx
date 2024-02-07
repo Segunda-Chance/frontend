@@ -69,7 +69,7 @@ function Login() {
               animationDuration="0.75"
               width="24"
               text-aling='center'
-              visible={true} /> :
+              visible={false} /> :
               <p>Entrar</p>
             }
             <span></span>

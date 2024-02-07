@@ -4,20 +4,20 @@ function Sobre() {
   return (
     <div className="container-sobre w-full flex flex-col mb-24">
       <div className=" flex flex-col w-3/6 m-auto">
-        <h1 className="m-auto text-3xl font-bold ">
+        <h1 className="m-auto mb-24 text-3xl font-bold ">
          O e-Commerce Solidário Transformando Vidas
         </h1>
 
         {/* Primeira Imagem */}
         <div className="flex flex-col md:flex-row items-center mb-4 text-shadow">
           <img
-            className="mx-auto mb-4 md:mb-0 rounded-full"
+            className="mx-auto mb-4 md:mb-0 rounded-full transform transition-transform duration-500 hover:scale-110"
             src="https://ik.imagekit.io/53urd0gwk/Segunda%20Chance/quimico.png?updatedAt=1707237585329"
             alt="Imagem do Projeto"
             width="300"
             height="150"
           />
-          <p className="text-lg md:ml-4 leading-7 text-justify mb-6 p-4 bg-white text-shadow">
+          <p className="text-lg md:ml-4 leading-7 text-justify mb-6 p-4 bg-white text-shadow transform transition-transform duration-500 hover:scale-110">
             Em conformidade com o Objetivo de Desenvolvimento Sustentável (ODS)
             3 - Saúde e Bem-estar, o Projeto SegundaChance concentra-se na
             abordagem do ODS 3.5, que busca reforçar a prevenção e o tratamento
@@ -32,15 +32,15 @@ function Sobre() {
         </div>
 
         {/* Segunda Imagem */}
-        <div className="flex flex-col md:flex-row items-center mb-4">
+        <div className="flex flex-col md:flex-row items-center mb-4 ">
           <img
-            className="mx-auto mb-4 md:mb-0 rounded-full"
+            className="mx-auto mb-4 md:mb-0 rounded-full transform transition-transform duration-500 hover:scale-110"
             src="https://ik.imagekit.io/53urd0gwk/Segunda%20Chance/e-comerce.png?updatedAt=1707236142602"
             alt="Imagem do Projeto"
             width="300"
             height="150"
           />
-          <p className="text-lg md:ml-4 leading-7 text-justify mb-6 p-4 bg-white text-shadow">
+          <p className="text-lg md:ml-4 leading-7 text-justify mb-6 p-4 bg-white text-shadow transform transition-transform duration-500 hover:scale-110">
             O Projeto SegundaChance optou por enfrentar esses desafios sociais
             por meio de um e-Commerce inovador, um Marketplace que visa
             conectar ONGs dedicadas ao tratamento de dependentes químicos com uma
@@ -55,13 +55,13 @@ function Sobre() {
         {/* Terceira Imagem */}
         <div className="flex flex-col md:flex-row items-center mb-4">
           <img
-            className="mx-auto mb-4 md:mb-0 rounded-full"
+            className="mx-auto mb-4 md:mb-0 rounded-full transform transition-transform duration-500 hover:scale-110"
             src="https://ik.imagekit.io/53urd0gwk/Segunda%20Chance/desing.png?updatedAt=1707236124313"
             alt="Imagem do Projeto"
             width="300"
             height="150"
           />
-          <p className="text-lg md:ml-4 leading-7 text-justify mb-6 p-4 bg-white text-shadow">
+          <p className="text-lg md:ml-4 leading-7 text-justify mb-6 p-4 bg-white text-shadow transform transition-transform duration-500 hover:scale-110">
             O e-Commerce Solidário proposto pelo Projeto desempenhará um papel
             crucial na solução do problema social identificado. Ao oferecer às
             ONGs uma vitrine digital, a plataforma proporcionará maior
