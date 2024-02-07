@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../../contexts/CartContext";
 import CardCart from "../cardcart/CardCart";
+import ListarProdutos from "../listarProdutos/ListarProdutos";
 
 function Cart() {
     const navigate = useNavigate();
@@ -10,7 +11,7 @@ function Cart() {
     const finalizarCompra = () => {
         // Lógica de finalização de compra aqui
         limparCart(); // Exemplo: limpando o carrinho ao finalizar a compra
-        navigate('/'); 
+        navigate('/listarprodutos');
     };
 
     return (
