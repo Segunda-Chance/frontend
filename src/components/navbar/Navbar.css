@@ -4,7 +4,8 @@
   }
 
 #navbarSupportedContent1 a img {
-    height: 15px"
+    height: 15px";
+
 }
 
 #dropdownMenuButton2 img {
@@ -25,6 +26,8 @@
     font-family: Dreams;
     font-size: xxx-large;
     z-index: 2;
+    color: orangered;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .logoImg{
