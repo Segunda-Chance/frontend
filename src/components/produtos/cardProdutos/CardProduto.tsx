@@ -1,6 +1,8 @@
+import { useContext } from 'react';
 import Produto from '../../../models/Produto';
 import Cart from '../cart/Cart';
 import "./CardProduto.css";
+import { CartContext } from '../../../contexts/CartContext';
 
 interface CardProdutoProps {
   produto: Produto
@@ -10,6 +12,9 @@ function CardProduto({ produto }: CardProdutoProps) {
   var popupViews = document.querySelectorAll('.popup-view');
   var popupBtns = document.querySelectorAll('.popup-btn');
   var closeBtns = document.querySelectorAll('.close-btn');
+
+  const {adicionarProduto} = useContext(CartContext)
+
   //javascript for quick view button
   var popup = function (popupClick: number) {
     popupViews[popupClick].classList.add('active');
@@ -27,6 +32,7 @@ function CardProduto({ produto }: CardProdutoProps) {
       });
     });
   });
+  
 
   return (
     <div>
@@ -47,7 +53,7 @@ function CardProduto({ produto }: CardProdutoProps) {
               <h2>{produto.nomeProduto}<br /><span>{produto.categoria?.tipo}</span></h2>
               <p>{produto.descricao}</p>
               <span className="price">R$ {produto.preco}</span>
-              <button type="button" className="button m-auto" onClick={Cart}>
+              <button className="button m-auto" onClick={() => adicionarProduto(produto)}>
                 <span className="button__text">Add Item</span>
                 <span className="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" className="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
               </button>

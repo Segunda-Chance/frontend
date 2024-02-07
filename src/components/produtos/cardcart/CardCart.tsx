@@ -8,7 +8,7 @@ interface CardProdutosProps {
 
 function CardCart({ item }: CardProdutosProps) {
 
-    const { adicionarProduto, removerProduto } = useContext(CartContext)
+    const { removerProduto } = useContext(CartContext)
 
     return (
         <div className='flex flex-col rounded-lg overflow-hidden justify-between bg-white'>
