@@ -11,7 +11,7 @@ function CardProduto({ produto }: CardProdutoProps) {
   var popupBtns = document.querySelectorAll('.popup-btn');
   var closeBtns = document.querySelectorAll('.close-btn');
   //javascript for quick view button
-  var popup = function(popupClick: number) {
+  var popup = function (popupClick: number) {
     popupViews[popupClick].classList.add('active');
   }
   popupBtns.forEach((popupBtn, i) => {
@@ -35,16 +35,16 @@ function CardProduto({ produto }: CardProdutoProps) {
           <h2 className="name">{produto.nomeProduto}</h2>
           <span className="price">R$ {produto.preco}</span>
           <button className="popup-btn" id="bt-visualizar">Visualizar</button>
-          <img src={produto.foto} className="product-img" alt=""/>
+          <img src={produto.foto} className="product-img" alt="" />
         </div>
         <div className="popup-view">
           <div className="popup-card">
             <a><i className="fas fa-times close-btn"></i></a>
             <div className="product-img">
-              <img src={produto.foto} alt=""/>
+              <img src={produto.foto} alt="" />
             </div>
-            <div  className="info">
-              <h2>{produto.nomeProduto}<br/><span>{produto.categoria?.tipo}</span></h2>
+            <div className="info">
+              <h2>{produto.nomeProduto}<br /><span>{produto.categoria?.tipo}</span></h2>
               <p>{produto.descricao}</p>
               <span className="price">R$ {produto.preco}</span>
               <button type="button" className="button m-auto" onClick={Cart}>
@@ -56,7 +56,7 @@ function CardProduto({ produto }: CardProdutoProps) {
         </div>
       </div>
     </div>
-  ) 
+  )
 }
 
 export default CardProduto
