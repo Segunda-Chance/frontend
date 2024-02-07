@@ -1,8 +1,7 @@
 import { useContext } from 'react';
-import Produto from '../../../models/Produto';
-import Cart from '../cart/Cart';
-import "./CardProduto.css";
 import { CartContext } from '../../../contexts/CartContext';
+import Produto from '../../../models/Produto';
+import "./CardProduto.css";
 
 interface CardProdutoProps {
   produto: Produto
@@ -13,7 +12,7 @@ function CardProduto({ produto }: CardProdutoProps) {
   var popupBtns = document.querySelectorAll('.popup-btn');
   var closeBtns = document.querySelectorAll('.close-btn');
 
-  const {adicionarProduto} = useContext(CartContext)
+  const { adicionarProduto } = useContext(CartContext)
 
   //javascript for quick view button
   var popup = function (popupClick: number) {
@@ -32,7 +31,7 @@ function CardProduto({ produto }: CardProdutoProps) {
       });
     });
   });
-  
+
 
   return (
     <div>
