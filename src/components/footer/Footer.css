@@ -1,0 +1,8 @@
+.segChance{
+    font-family: Dreams;
+}
+
+@font-face {
+    font-family: Dreams;
+    src: url(/src/assets/font/CreateDream.otf);
+  }

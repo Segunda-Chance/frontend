@@ -1,0 +1,28 @@
+.container-home{
+    padding-top: 150px;
+}
+
+.infoProduto{
+    font-family: Quicksand;
+    font-weight: 600;
+    font-size: 33px ;
+    color: #4a681e;
+}
+.divInfo{
+    padding-bottom: -100px;
+}
+.tituloProduto{
+    font-family: Quicksand;
+}
+.containerProdutos{
+    width: 100%;
+}
+.imginfo{
+    width: 100px;
+    font-weight: 100;
+}
+
+.containerP{
+    margin: auto;
+    width: 85%;
+}

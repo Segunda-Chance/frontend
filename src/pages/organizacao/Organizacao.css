@@ -1,0 +1,25 @@
+.orgStats{
+    filter:sepia(20%);
+    font-family: Lifesavers;
+}
+
+  @font-face {
+    font-family: Lifesavers;
+    src: url(/src/assets/font/LifeSavers-Bold.ttf);
+  }
+  
+  @media only screen and (max-width: 1023px) {
+    .containerOrg{
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+
+  @media only screen and (max-width: 400px) {
+    .containerOrg{
+      display: flex;
+      flex-direction: column;
+    }
+
+  }

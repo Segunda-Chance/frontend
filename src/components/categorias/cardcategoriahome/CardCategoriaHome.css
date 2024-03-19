@@ -1,0 +1,70 @@
+.cardHome::before {
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  top: 20%;
+}
+
+.spanDesc{
+  font-family: Montserrat ;
+  font-weight: 700;
+  padding-top: 8px;
+  color: #A39575;
+}
+
+.cardHome::before,
+.cardHome::after {
+  content: "";
+  position: absolute;
+  filter: blur(10px);
+}
+
+.cardsHome {
+  display: flex;
+  gap: 40px;
+}
+
+.cardsHome .red
+ {
+  width: 200px;
+  height: 230px;
+  font-family: "CustomFont", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  backdrop-filter: blur(30px);
+  background-color: #FAF7EC;
+  border: 8px #A39575;
+  border-style: double;
+}
+
+.cardsHome .cardHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 400ms;
+}
+
+
+.cardsHome .cardHome p.second-text {
+  font-size: 0.7em;
+}
+
+.cardsHome .cardHome:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cardsHome:hover > .cardHome:not(:hover) {
+  filter: blur(5px);
+  transform: scale(0.9, 0.9);
+}
+
+@media only screen and (max-width: 1023px) {
+  .cardsHome .red{
+    width: 150px;
+    height: 190px;
+  }
+}

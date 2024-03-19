@@ -1,0 +1,31 @@
+@media (min-width: 992px) {
+    .rotate-lg-6 {
+      transform: rotate(6deg);
+    }
+  }
+
+  /* These are the KEY styles - you can add them directly to any object you want in your project */
+  .fancy-border-radius {
+    border-radius: 53% 47% 52% 48% / 36% 41% 59% 64%;
+  }
+
+  .fotoStats{
+    filter:sepia(60%);
+    border-radius: 10px;
+  }
+
+  @media only screen and (max-width: 1023px) {
+    .divStatss{
+      position: relative;
+      margin: auto;
+    }
+  }
+
+  .statsfonte{
+    font-family: Lifesavers;
+}
+
+  @font-face {
+    font-family: Lifesavers;
+    src: url(/src/assets/font/LifeSavers-Bold.ttf);
+  }

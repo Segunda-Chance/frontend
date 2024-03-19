@@ -1,0 +1,79 @@
+.cardDelete {
+    width: 380px;
+    height: 320px;
+    border-radius: 15px;
+    background: #FC948F;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shadowB{
+    text-shadow: 1px 1px 1px rgb(19, 9, 39);
+  }
+  .shadowW{
+    text-shadow: 1px 1px 1px rgb(94, 14, 14);
+  }
+  
+  .cardd::before {
+    content: "";
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -40%;
+    left: -20%;
+    border-radius: 50%;
+    border: 35px solid rgba(255, 255, 255, 0.102);
+    transition: all .8s ease;
+    filter: blur(.5rem);
+  }
+  
+  .texto {
+    flex-grow: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    font-weight: 900;
+    font-size: 1.1em;
+  }
+  
+  .subtitle {
+    font-size: .6em;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.691);
+  }
+  
+  .icons {
+
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 0px 0px 15px 15px;
+    overflow: hidden;
+  }
+  
+  .btn {
+    border: none;
+    width: 50%;
+    height: 35px;
+    background-color: #3c3c4dc6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+  }
+  
+  .svg-icon {
+    width: 25px;
+    height: 25px;
+    stroke: rgb(21, 32, 69);
+  }
+  
+  .btn:hover {
+    background-color: #212130;
+    color: white;
+    font-weight: 900;
+  }
+  

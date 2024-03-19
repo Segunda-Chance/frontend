@@ -1,0 +1,10 @@
+
+
+@media only screen and (max-width: 1023px) {
+    .containerCatHome{
+        display: flex;
+        margin: auto;
+        width: auto;
+        
+    }
+}

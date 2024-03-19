@@ -1,0 +1,54 @@
+@font-face {
+    font-family: Dreams;
+    src: url(/src/assets/font/CreateDream.otf);
+  }
+  
+  @font-face {
+    font-family: Poiret;
+    src: url(/src/assets/font/PoiretOne-Regular.ttf);
+  }
+
+  .navfonte{
+    font-family: Poiret;
+    font-weight: bold;
+  }
+  
+
+#navbarSupportedContent1 a img {
+    height: 10px;
+
+}
+
+.containerInferior{
+    border-top: 0.2px solid green;
+}
+
+#dropdownMenuButton2 img {
+    height: 35px; 
+    width: 35px;
+}
+
+.logo-segundachance a img{
+    width: 75px;
+}
+
+.container-contato{
+    padding-top: 10px;
+}
+
+.temaLogo{
+    font-family: Dreams;
+    font-size: 40px;
+    position: relative;
+    z-index: 2;
+    color: orangered;
+    right: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+
+.logoImg{
+    position: relative;
+    z-index: 1;
+    left: 5px;
+} 

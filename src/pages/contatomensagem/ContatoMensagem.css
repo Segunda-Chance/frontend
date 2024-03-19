@@ -1,0 +1,8 @@
+.mensagemfonte{
+    font-family: Lifesavers;
+}
+
+  @font-face {
+    font-family: Lifesavers;
+    src: url(/src/assets/font/LifeSavers-Bold.ttf);
+  }
