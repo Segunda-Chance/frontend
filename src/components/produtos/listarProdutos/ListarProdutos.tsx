@@ -4,9 +4,8 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
 import { buscar } from '../../../services/Service';
 import { ToastAlerta } from '../../../utils/ToastAlerta';
-import CardProduto from '../cardProdutos/CardProduto';
 import Loader from '../../loader/Loader';
-import { FiltroCat } from '../../../contexts/ListarCatContext';
+import CardProduto from '../cardProdutos/CardProduto';
 
 function ListarProdutos() {
   const navigate = useNavigate();
@@ -18,7 +17,7 @@ function ListarProdutos() {
 
   // Pode ignorar esse erro, que no caso estou criando um UseContext de useState, então o TypeScript fica perdido, mas na realidade não tem problema aqui. Até tem como resolver e parar de aparecer o erro, mas no momento não sei como
 
-  const [context, setContext] = useContext(FiltroCat);
+  /* const [context, setContext] = useContext(FiltroCat);
 
   function buscarPorCategoria() {
     context != '' &&
@@ -27,7 +26,7 @@ function ListarProdutos() {
           return produto.categoria?.tipo === context;
         })
       );
-  }
+  } */
 
   async function buscarProdutos() {
     try {
@@ -57,9 +56,9 @@ function ListarProdutos() {
     setLista(produtos);
   }, []);
 
-  useEffect(() => {
+  /* useEffect(() => {
     buscarPorCategoria();
-  }, [context]);
+  }, [context]); */
 
   return (
     <>
@@ -67,13 +66,13 @@ function ListarProdutos() {
         <button
           className="p-2 rounded-2xl"
           onClick={() => {
-            setContext();
+            /* setContext(); */
           }}
         >
           Mostrar todos
         </button>
         <p className="font-semibold text-neutral-400">
-          {!context ? produtos.length : lista.length} resultados
+          {/* {!context ? produtos.length : lista.length} */} resultados
         </p>
       </div>
       {produtos.length === 0 && <Loader />}
@@ -84,7 +83,7 @@ function ListarProdutos() {
             ) : (
               <p className="text-2xl">Hmm, não achamos nada! :(</p>
             )} */}
-          {!context ? (
+          {/* {!context ? (
             produtos.map((produto) => <CardProduto key={produto.id} produto={produto} />)
           ) : lista.length > 0 ? (
             lista.map((produto) => <CardProduto key={produto.id} produto={produto} />)
@@ -92,7 +91,7 @@ function ListarProdutos() {
             <p className="text-xl font-semibold text-red lg:col-span-4 md:col-span-2">
               Hmm, não achamos nada! :(
             </p>
-          )}
+          )} */}
         </div>
       </div>
     </>
