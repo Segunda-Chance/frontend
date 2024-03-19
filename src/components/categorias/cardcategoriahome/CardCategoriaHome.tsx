@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import Categoria from '../../../models/Categoria';
 import './CardCategoriaHome.css';
 
@@ -12,7 +11,7 @@ function CardCategoriaHome({ categoria }: CardCategoriaProps) {
   return (
     <div className='buttonnn'
       onClick={() => {
-       
+
       }}
     >
       <button type="button">
