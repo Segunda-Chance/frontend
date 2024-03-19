@@ -1,0 +1,14 @@
+
+.container-sobre{
+    padding-top: 120px;
+    font-weight: 600;
+}
+
+.sobrefonte{
+    font-family: Lifesavers;
+}
+
+  @font-face {
+    font-family: Lifesavers;
+    src: url(/src/assets/font/LifeSavers-Bold.ttf);
+  }
