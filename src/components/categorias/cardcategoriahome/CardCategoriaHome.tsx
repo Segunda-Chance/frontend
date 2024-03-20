@@ -8,10 +8,11 @@ interface CardCategoriaProps {
 }
 
 function CardCategoriaHome({ categoria }: CardCategoriaProps) {
-  const [context, setContext] = useContext(FiltroCat);
+  const [, setContext]: any = useContext(FiltroCat);
 
   return (
-    <div className='buttonnn'
+    <div
+      className="buttonnn"
       onClick={() => {
         setContext(categoria.tipo);
       }}
