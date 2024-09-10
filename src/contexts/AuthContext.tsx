@@ -23,7 +23,7 @@ export function AuthProvider({ children }: AuthProvidersProps) {
         nomeUsuario: '',
         usuario: '',
         senha: '',
-        foto: 'https://i.imgur.com/I8MfmC8.png',
+        foto: 'https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Perfil%20indefinido.png?updatedAt=1705682655295',
         token: ''
     })
 
@@ -55,7 +55,7 @@ export function AuthProvider({ children }: AuthProvidersProps) {
             nomeUsuario: '',
             usuario: '',
             senha: '',
-            foto: 'https://i.imgur.com/I8MfmC8.png',
+            foto: 'https://ik.imagekit.io/wzl99vhez/Segunda%20Chance/Perfil%20indefinido.png?updatedAt=1705682655295',
             token: ''
         })
     }
